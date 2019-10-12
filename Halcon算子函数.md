@@ -103,78 +103,77 @@
 
 ### 5.1 Binocular Stereo 双目
 
-| 序号 | 函数名                           | 函数说明及注释                                               | 页码 |
-| ---- | -------------------------------- | ------------------------------------------------------------ | ---- |
-| 1    | binocular_disparity              | 通过相互关系来计算两个图像的双目视觉差                       | 53   |
-| 2    | binocular_disparity_mg           | 通过多格子方法来计算两个图像的双目视觉差                     | 54   |
-| 3    | binocular_distance               | 通过相互关系来计算两个立体图像的双目视觉差                   | 54   |
-| 4    | binocular_distance_mg            | 通过多格子方法来计算两个立体图像的双目视觉差                 | 54   |
-| 5    | disparity_image_to_xyz           | 把一个观影距离转变成一个被矫正的3D立体点                     | 55   |
-| 6    | disparity_to_distance            | 将观影距离转换为矫正双目视觉立体系统中的间隔值               | 55   |
-| 7    | disparity_to_point_3d            | 将一个图像点和它的观影距离转换为一个矫正立体系统中的三维点   | 55   |
-| 8    | distance_to_disparity            | 将一个间隔值转换为一个矫正立体系统中的观影距离               | 56   |
-| 9    | essential_to_fundamental_matrix  | 计算一个从原始矩阵衍生而来的基础矩阵                         | 56   |
-| 10   | gen_binocular_proj_rectification | 计算双目视觉立体系统图像的投射矫正值                         | 56   |
-| 11   | gen_binocular_rectification_map  | 创建转换图，其描述从一个双目相机到一个普通的矫正图像面的图像映射 | 56   |
-|      |                                  |                                                              |      |
-|      |                                  |                                                              |      |
-|      |                                  |                                                              |      |
-|      |                                  |                                                              |      |
-|      |                                  |                                                              |      |
-|      |                                  |                                                              |      |
-|      |                                  |                                                              |      |
-|      |                                  |                                                              |      |
-|      |                                  |                                                              |      |
-|      |                                  |                                                              |      |
+| 序号 | 函数名                            | 函数说明及注释                                               | 页码 |
+| ---- | --------------------------------- | ------------------------------------------------------------ | ---- |
+| 1    | binocular_disparity               | 通过相互关系来计算两个图像的双目视觉差                       | 53   |
+| 2    | binocular_disparity_mg            | 通过多格子方法来计算两个图像的双目视觉差                     | 54   |
+| 3    | binocular_distance                | 通过相互关系来计算两个立体图像的双目视觉差                   | 54   |
+| 4    | binocular_distance_mg             | 通过多格子方法来计算两个立体图像的双目视觉差                 | 54   |
+| 5    | disparity_image_to_xyz            | 把一个观影距离转变成一个被矫正的3D立体点                     | 55   |
+| 6    | disparity_to_distance             | 将观影距离转换为矫正双目视觉立体系统中的间隔值               | 55   |
+| 7    | disparity_to_point_3d             | 将一个图像点和它的观影距离转换为一个矫正立体系统中的三维点   | 55   |
+| 8    | distance_to_disparity             | 将一个间隔值转换为一个矫正立体系统中的观影距离               | 56   |
+| 9    | essential_to_fundamental_matrix   | 计算一个从原始矩阵衍生而来的基础矩阵                         | 56   |
+| 10   | gen_binocular_proj_rectification  | 计算双目视觉立体系统图像的投射矫正值                         | 56   |
+| 11   | gen_binocular_rectification_map   | 创建转换图，其描述从一个双目相机到一个普通的矫正图像面的图像映射 | 56   |
+| 12   | intersect_lines_of_sight          | 从一个双目相机系统视觉中两条线的交点中获取一个三维点         | 57   |
+| 13   | match_essential_matrix_ransack    | 通过自动发掘图像点间对应关系来计算立体图像对应的原始（本质）矩阵 | 57   |
+| 14   | match_fundamental_matrix_ransack  | 通过自动发掘图像点间对应关系来计算立体图像对应的基本矩阵     | 58   |
+| 15   | match_rel_pose_ransack            | 通过自动发掘图像点间对应关系来计算两个相机间的相对方位       | 58   |
+| 16   | reconst3d_from_fundamental_matrix | 计算基于基本矩阵点投影的三位重建                             | 59   |
+| 17   | rel_pose_to_fundamental_matrix    | 计算两个相机相关方向中获取的基本矩阵                         | 60   |
+| 18   | vector_to_essential_matrix        | 计算给定图像点间映射和已知相机矩阵的原始矩阵，重建三维点     | 60   |
+| 19   | vector_to_fundamental_matrix      | 计算给定图像点间映射的集合的基本矩阵，重建三维点             | 60   |
+| 20   | vector_to_rel_pose                | 计算给定图像点对应关系和已知相机参数的两相机间相对方位，重建三维点 | 61   |
 
-### 4.1 Shape-Based外形匹配
+### 5.2 Depth From Focus 焦点深度
 
-| 序号 | 函数名 | 函数说明及注释 | 页码 |
-| ---- | ------ | -------------- | ---- |
-|      |        |                |      |
-|      |        |                |      |
+| 序号 | 函数名                          | 函数说明及注释                         | 页码 |
+| ---- | ------------------------------- | -------------------------------------- | ---- |
+| 1    | depth_from_focus                | 利用多倍聚集灰度级提取高度（厚度）     | 62   |
+| 2    | select_grayvalues_from_channels | 利用索引图像选择一个多通道图像的灰度值 | 62   |
 
-### 4.1 Shape-Based外形匹配
+### 5.3 Multi-View Stereo 多视角立体模型
 
-| 序号 | 函数名 | 函数说明及注释 | 页码 |
-| ---- | ------ | -------------- | ---- |
-|      |        |                |      |
-|      |        |                |      |
-|      |        |                |      |
-|      |        |                |      |
-|      |        |                |      |
-|      |        |                |      |
-|      |        |                |      |
-|      |        |                |      |
-|      |        |                |      |
-|      |        |                |      |
+| 序号 | 函数名                       | 函数说明及注释                         | 页码 |
+| ---- | ---------------------------- | -------------------------------------- | ---- |
+| 1    | clear_all_stereo_models      | 清除所有的多视角立体模型，释放内存空间 | 62   |
+| 2    | clear_stereo_model           | 清除指定的多视角立体模型，释放内存空间 | 62   |
+| 3    | create_stereo_model          | 创建一个多视角立体模型                 | 62   |
+| 4    | get_stereo_model_image_pairs | 获取立体模型中双目（成对）图像的列表   | 62   |
+| 5    | get_stereo_model_object      | 获取立体重建的中间结果（图标）         | 63   |
+| 6    | get_stereo_model_param       | 提取多视角立体模型参数                 | 63   |
+| 7    | reconstruct_points_stereo    | 重建多视角立体3D参考点                 | 63   |
+| 8    | reconstruct_surface_stereo   | 重建多视角3D曲面                       | 63   |
+| 9    | set_stereo_model_image_pairs | 指定双目（成对）图像的表面立体重建     | 63   |
+| 10   | set_stereo_model_param       | 设置多视角立体模型参数                 | 64   |
 
-### 4.1 Shape-Based外形匹配
+### 5.4 Photometric Stereo 估测光源
 
-| 序号 | 函数名 | 函数说明及注释 | 页码 |
-| ---- | ------ | -------------- | ---- |
-|      |        |                |      |
-|      |        |                |      |
-|      |        |                |      |
-|      |        |                |      |
-|      |        |                |      |
-|      |        |                |      |
-|      |        |                |      |
-|      |        |                |      |
-|      |        |                |      |
-|      |        |                |      |
+| 序号 | 函数名             | 函数说明及注释                         | 页码 |
+| ---- | ------------------ | -------------------------------------- | ---- |
+| 1    | estimate_al_am     | 估测一个平面的反射率和反射光的数目     | 64   |
+| 2    | estimate_sl_al_lr  | 估测一个光源的倾斜度和一个平面的反射率 | 64   |
+| 3    | estimate_sl_al_zc  | 估测一个光源的倾斜度和一个平面的反射率 | 64   |
+| 4    | estimate_tilt_lr   | 估测一个光源的倾斜                     | 65   |
+| 5    | estimate_tilt_zc   | 估测一个光源的倾斜                     | 65   |
+| 6    | phot_stereo        | 根据至少三个灰度值的图像来重建一个平面 | 65   |
+| 7    | sfs_mod_lr         | 从一个灰度值图像重建一个平面           | 65   |
+| 8    | sfs_orig_lr        | 从一个灰度值图像重建一个平面           | 66   |
+| 9    | sfs_pentland       | 从一个灰度值图像重建一个平面           | 66   |
+| 10   | shade_height_field | 重建一个表面灰色突起的图像             | 66   |
 
-### 4.1 Shape-Based外形匹配
+### 5.5 Sheet of Light 片光
 
-| 序号 | 函数名 | 函数说明及注释 | 页码 |
-| ---- | ------ | -------------- | ---- |
-|      |        |                |      |
-|      |        |                |      |
-|      |        |                |      |
-|      |        |                |      |
-|      |        |                |      |
-|      |        |                |      |
-|      |        |                |      |
-|      |        |                |      |
-|      |        |                |      |
-|      |        |                |      |
+| 序号 | 函数名                                    | 函数说明及注释                               | 页码 |
+| ---- | ----------------------------------------- | -------------------------------------------- | ---- |
+| 1    | apply_sheet_of_light_calibration          | 应用校准变换到不一致的图像                   | 67   |
+| 2    | clear_all_sheet_of_light_models           | 清除所有的片光模型，释放内存空间             | 67   |
+| 3    | clear_sheet_of_light_model                | 清除指定片光模型，释放内存空间               | 67   |
+| 4    | create_sheet_of_light_model               | 创建一个基于3D测量的片光模型                 | 67   |
+| 5    | get_sheet_of_light_param                  | 提取片光模型的参数                           | 68   |
+| 6    | get_sheet_of_light_result                 | 提取一个通过片光技术获得的测量结果（图标）   | 68   |
+| 7    | get_sheet_of_light_result_object_model_3d | 提取一个通过片光技术获得的3D对象模型测量结果 | 68   |
+| 8    | measure_profile_sheet_of_light            | 对输入和存储的轮廓图像记性片光技术处理       | 68   |
+| 9    | query_sheet_of_light_params               | 提取参数列表                                 | 68   |
+| 10   | set_sheet_of_light_param                  | 设置片光模型对应的参数                       | 68   |
