@@ -707,21 +707,193 @@
 | 5    | wiener_filter    | 通过Wiener滤波进行图像恢复         | 198  |
 | 6    | wiener_filter_ni | 通过Wiener滤波进行图像恢复         | 198  |
 
+## Chapter 11: Graphics(绘图)
 
+### 11.1 Drawing  绘图
 
+| 序号 | 函数名                | 函数说明及注释                    | 页码 |
+| ---- | --------------------- | --------------------------------- | ---- |
+| 1    | drag_region1          | 一个区域的交互运动                | 204  |
+| 2    | drag_region2          | 一个带有定点规格区域的交互运动    | 204  |
+| 3    | drag_region3          | 一个带有限制位置区域的交互运动    | 204  |
+| 4    | draw_circle           | 一个圆的交互绘图                  | 204  |
+| 5    | draw_circle_mod       | 一个圆的交互绘图                  | 205  |
+| 6    | draw_ellipse          | 一个椭圆的交互绘图                | 205  |
+| 7    | draw_ellipse_mod      | 一个椭圆的交互绘图                | 205  |
+| 8    | draw_line             | 一根线的交互绘图                  | 205  |
+| 9    | draw_line_mod         | 一根线的交互绘图                  | 206  |
+| 10   | draw_nurbs            | 一个NURBS曲线的交互绘图           | 206  |
+| 11   | draw_nurbs_interp     | 使用插值的一个NURBS曲线的交互绘图 | 206  |
+| 12   | draw_nurbs_interp_mod | 使用插值的一个NURBS曲线的交互修正 | 206  |
+| 13   | draw_nurbs_mod        | 一个NURBS曲线的交互修正           | 207  |
+| 14   | draw_point            | 一个点的交互绘图                  | 207  |
+| 15   | draw_point_mod        | 一个点的交互绘图                  | 208  |
+| 16   | draw_polygon          | 一个多边形的交互绘图              | 208  |
+| 17   | draw_rectangle1       | 画一个与坐标轴平行的矩形          | 208  |
+| 18   | draw_rectangle1_mod   | 画一个与坐标轴平行的矩形          | 208  |
+| 19   | draw_rectangle2       | 任意定向矩形的交互绘图            | 209  |
+| 20   | draw_rectangle2_mod   | 任意定向矩形的交互绘图            | 209  |
+| 21   | draw_region           | 一个闭合区域的交互绘图            | 209  |
+| 22   | draw_xld              | 一个轮廓的交互绘图                | 209  |
+| 23   | draw_xld_mod          | 一个轮廓的交互修正                | 209  |
+| 24   | disp_3d_coord_system  | 显示3D坐标轴系统                  | 210  |
 
+### 11.2 Gnuplot 区域（小块地皮）
 
+| 序号 | 函数名                | 函数说明及注释                                           | 页码 |
+| ---- | --------------------- | -------------------------------------------------------- | ---- |
+| 1    | gnuplot_close         | 关闭所有打开的gunplot文件或者终止一个活动的gnuplot子流程 | 210  |
+| 2    | gnuplot_open_file     | 为图像和控制量的可视化打开一个gnuplot文件                | 210  |
+| 3    | gnuplot_open_pipe     | 为图像和控制量的可视化打开一个通道的gnuplot流程          | 210  |
+| 4    | gnuplot_plot_ctrl     | 使用gnuplot显示控制量                                    | 210  |
+| 5    | gnuplot_plot_funct_1d | 使用gnuplot显示控制量的功能                              | 210  |
+| 6    | gunplot_plot_image    | 使用gnuplot使一个图像可视化                              | 210  |
 
+### 11.3  LUT（颜色查找表）也就是调色板
 
+| 序号 | 函数名        | 函数说明及注释               | 页码 |
+| ---- | ------------- | ---------------------------- | ---- |
+| 1    | disp_lut      | 调色板的图解                 | 211  |
+| 2    | draw_lut      | 交互利用调色板               | 211  |
+| 3    | get_fixed_lut | 为实际彩色图像获取固定调色板 | 211  |
+| 4    | get_lut       | 获取现在的调色板             | 211  |
+| 5    | get_lut_style | 获取调色板的修正参数         | 211  |
+| 6    | query_lut     | 查询所有可得到的调色板       | 212  |
+| 7    | set_fixed_lut | 为实际彩色图像固定调色板     | 212  |
+| 8    | set_lut       | 设置调色板                   | 212  |
+| 9    | set_lut_style | 改变调色板                   | 213  |
+| 10   | write_lut     | 把调色板作为文件写入         | 213  |
 
+### 11.4  Mouse 鼠标事件
 
+| 序号 | 函数名                | 函数说明及注释                   | 页码 |
+| ---- | --------------------- | -------------------------------- | ---- |
+| 1    | get_mbutton           | 等待鼠标按下并返回鼠标按下的位置 | 213  |
+| 2    | get_mbutton_sub_pix   | 等待鼠标按下并返回鼠标按下的位置 | 213  |
+| 3    | get_mposition         | 查询鼠标位置                     | 213  |
+| 4    | get_mposition_sub_pix | 查询鼠标位置                     | 213  |
+| 5    | get_mshape            | 查询现有鼠标指针形状             | 214  |
+| 6    | query_mshape          | 查询所有可得到的鼠标指针形状     | 214  |
+| 7    | set_mshape            | 设置现在鼠标指针形状             | 214  |
 
+### 11.5  Output 输出图案
 
+| 序号 | 函数名            | 函数说明及注释                  | 页码 |
+| ---- | ----------------- | ------------------------------- | ---- |
+| 1    | disp_arc          | 在一个窗口中显示圆形弧          | 215  |
+| 2    | disp_arrow        | 在一个窗口中显示箭头            | 215  |
+| 3    | disp_channel      | 用指定通道显示图像              | 215  |
+| 4    | disp_circle       | 在一个窗口中显示圆              | 215  |
+| 5    | disp_color        | 显示一个彩色（RGB）图像         | 216  |
+| 6    | disp_cross        | 在一个窗口中显示交叉            | 216  |
+| 7    | disp_distribution | 显示一个噪声分布                | 216  |
+| 8    | disp_ellipse      | 显示椭圆                        | 216  |
+| 9    | disp_image        | 显示灰度值图像                  | 216  |
+| 10   | disp_line         | 在窗口中画一条线                | 217  |
+| 11   | disp_obj          | 显示图像目标（图像，区域，XLD） | 217  |
+| 12   | disp_polygon      | 显示一个多边型                  | 217  |
+| 13   | disp_rectangle1   | 显示水平矩形                    | 217  |
+| 14   | disp_rectangle2   | 显示任意方向的矩形              | 217  |
+| 15   | disp_region       | 在一个窗口中显示区域            | 218  |
+| 16   | disp_xld          | 显示一个XLD物体                 | 218  |
 
+### 11.6  Parameters 参数
 
+| 序号 | 函数名           | 函数说明及注释                 | 页码 |
+| ---- | ---------------- | ------------------------------ | ---- |
+| 1    | get_comprise     | 获取一个图像矩阵的输出处理     | 219  |
+| 2    | get_draw         | 获取区域填充模式               | 219  |
+| 3    | get_fix          | 获取查询表的固定模式           | 219  |
+| 4    | get_hsi          | 获取颜色的HSI编码              | 220  |
+| 5    | get_icon         | 查询区域输出的图标             | 220  |
+| 6    | get_insert       | 获取显示模式                   | 220  |
+| 7    | get_line_approx  | 获取轮廓显示的近似误差         | 220  |
+| 8    | get_line_style   | 获取轮廓边线的显示模型（线性） | 220  |
+| 9    | get_line_width   | 获取轮廓显示的线宽             | 220  |
+| 10   | get_line_paint   | 获取灰度值的显示模式           | 220  |
+| 11   | get_part         | 获取图像部分                   | 220  |
+| 12   | get_part_style   | 获取灰度值显示的插值模式       | 221  |
+| 13   | get_pixel        | 获取查询表索引的颜色           | 221  |
+| 14   | get_rgb          | 获取RGB编码中的颜色            | 221  |
+| 15   | get_shape        | 获取区域输出形状               | 221  |
+| 16   | get_window_param | 获取窗口设置参数的值           | 221  |
+| 17   | query_all_colors | 查询所有颜色名称               | 221  |
+| 18   | query_color      | 查询窗口中显示的所有颜色名称   | 221  |
+| 19   | query_colored    | 查询颜色输出的颜色数目         | 221  |
+| 20   | query_gray       | 查询显示的灰度值               | 222  |
+| 21   | query_insert     | 查询可能的图解模式             | 222  |
+| 22   | quert_line_width | 查询可能的线宽                 | 222  |
+| 23   | query_paint      | 查询灰度值显示模式             | 222  |
+| 24   | query_shape      | 查询区域显示模式               | 222  |
+| 25   | set_color        | 设置输出颜色                   | 222  |
+| 26   | set_colored      | 设置多输出颜色                 | 222  |
+| 27   | set_comprise     | 定义图像矩阵输出剪辑           | 222  |
+| 28   | set_draw         | 定义区域填充模式               | 223  |
+| 29   | set_fix          | 设置固定的查询表               | 223  |
+| 30   | set_gray         | 定义区域输出的灰度值           | 223  |
+| 31   | set_hsi          | 定义输出颜色（HSI编码）        | 223  |
+| 32   | set_icon         | 区域输出的图标定义             | 223  |
+| 33   | set_insert       | 定义图像输出功能               | 223  |
+| 34   | set_line_approx  | 定义输出新暗示的近似误差       | 223  |
+| 35   | set_line_style   | 定义一个轮廓输出模式           | 223  |
+| 36   | set_line_width   | 定义区域轮廓输出的线宽         | 224  |
+| 37   | set_paint        | 定义灰度值输出模式             | 224  |
+| 38   | set_part         | 修正显示图像部分               | 224  |
+| 39   | set_part_style   | 为灰度值输出定义一个插值方法   | 224  |
+| 40   | set_pixel        | 定义一个颜色查询表索引         | 224  |
+| 41   | set_rgb          | 通过RGB值设置颜色定义          | 224  |
+| 42   | set_shape        | 定义区域输出轮廓               | 224  |
+| 43   | set_window_param | 设置窗口参数                   | 225  |
 
+### 11.7 Text 文本
 
+| 序号 | 函数名                | 函数说明及注释                     | 页码 |
+| ---- | --------------------- | ---------------------------------- | ---- |
+| 1    | get_font              | 获取现有字体                       | 226  |
+| 2    | get_font_extents      | 获取所有字体的特征（最大值）       | 226  |
+| 3    | get_string_extents    | 获取一个字符串的空间大小           | 226  |
+| 4    | get_tposition         | 获取光标位置                       | 226  |
+| 5    | get_tshape            | 获取文本光标的形状                 | 226  |
+| 6    | new_line              | 设置下一行的开始文本光标的位置     | 227  |
+| 7    | query_font            | 查询可得到的字体                   | 227  |
+| 8    | query_tshape          | 查询文本光标的所有可得到的形状     | 227  |
+| 9    | read_char             | 从一个文本窗口读取一个字符         | 227  |
+| 10   | read_string           | 从一个文本窗口读取一个字符串       | 227  |
+| 11   | set_font              | 设置文本输出的字体                 | 227  |
+| 12   | set_tposition         | 设置文本光标的位置                 | 227  |
+| 13   | set_tshape            | 设置文本光标的形状                 | 227  |
+| 14   | write_string          | 在一个窗口中打印文本               | 227  |
+| 15   | disp_continue_message | 在荧幕上显示暂停程序继续操作的信息 | 228  |
+| 16   | disp_message          | 在指定位置显示字符信息             | 228  |
+| 17   | set_diaplay_font      | 设置显示的字体                     | 228  |
 
+### 11.8 Window 窗口
+
+| 序号 | 函数名                | 函数说明及注释                               | 页码 |
+| ---- | --------------------- | -------------------------------------------- | ---- |
+| 1    | clear_rectangle       | 在输出窗口中删除一个矩形                     | 229  |
+| 2    | clear_window          | 清除一个输出窗口                             | 229  |
+| 3    | close_window          | 关闭一个输出窗口                             | 229  |
+| 4    | copy_rectangle        | 在输出窗口间复制矩形内所有像素               | 229  |
+| 5    | dump_window           | 把窗口内容写入一个文件                       | 229  |
+| 6    | dump_window_image     | 在一个图像目标中写窗口内容                   | 230  |
+| 7    | get_os_window_handle  | 获取操作系统图像处理                         | 230  |
+| 8    | get_window_attr       | 获取窗口特征                                 | 230  |
+| 9    | get_window_extents    | 一个窗口大小和位置的信息                     | 230  |
+| 10   | get_window_pointer3   | 一个窗口像素数据的通道                       | 230  |
+| 11   | get_window_type       | 获取窗口类型                                 | 231  |
+| 12   | move_rectangle        | 在一个输出窗口内部复制                       | 231  |
+| 13   | new_extern_window     | 在Windows_NT 下创建一个虚拟图形窗口          | 231  |
+| 14   | open_textwindow       | 打开一个文本窗口                             | 231  |
+| 15   | open_window           | 打开一个图形窗口                             | 231  |
+| 16   | query_window_type     | 查询所有可得到的窗口类型                     | 232  |
+| 17   | set_window_attr       | 设置窗口特征                                 | 232  |
+| 18   | set_window_dc         | 设置一个虚拟图形窗口（WIndows_NT）的设计背景 | 232  |
+| 19   | set_window_extents    | 修正一个窗口的位置和大小                     | 232  |
+| 20   | set_window_type       | 指定一个窗口类型                             | 232  |
+| 21   | slide_image           | 两个窗口缓冲区的交互输出                     | 232  |
+| 22   | unproject_coordinates | 在3D窗口中计算图像坐标的点                   | 233  |
+| 23   | update_window_pose    | 修正3D姿势                                   | 233  |
 
 
 
