@@ -895,9 +895,40 @@
 | 22   | unproject_coordinates | 在3D窗口中计算图像坐标的点                   | 233  |
 | 23   | update_window_pose    | 修正3D姿势                                   | 233  |
 
+## Chapter 12 : Identification(鉴定)
 
+### 12.1 Bar Code 条形码
 
+| 序号 | 函数名                      | 函数说明及注释                                 | 页码 |
+| ---- | --------------------------- | ---------------------------------------------- | ---- |
+| 1    | clear_all_bar_code_models   | 清除所有条形码模型，释放其分配的存储空间       | 237  |
+| 2    | clear_bar_code_model        | 清除一个条形码模型，释放相应的存储空间         | 237  |
+| 3    | create_bar_code_model       | 创建一个条形码阅读器模型                       | 237  |
+| 4    | decode_bar_code_rectangle2  | 检测和读取在一个矩形框内的一副图像条形码符号   | 238  |
+| 5    | find_bar_code               | 检测和读取一副图像中条形码符号                 | 238  |
+| 6    | get_bar_code_object         | 访问创建在搜寻或条形码符号解码过程中的对象图标 | 239  |
+| 7    | get_bar_code_param          | 获取一个或多个描述条形码模式的参数             | 240  |
+| 8    | get_bar_code_param_specific | 获取一个或多个描述条形码模式的特定参数         | 240  |
+| 9    | get_bar_code_result         | 获取字母数字混合编码的结果                     | 240  |
+| 10   | query_bar_code_params       | 获取对应的条形码有哪些特定的参数               | 240  |
+| 11   | set_bar_code_param          | 设置条形码模型的选定参数                       | 240  |
+| 12   | set_bar_code_param_specific | 设置条形码模型的特定参数                       | 241  |
 
+### 12.2 Data Code 二维条形码
+
+| 序号 | 函数名                        | 函数说明及注释                                             | 页码 |
+| ---- | ----------------------------- | ---------------------------------------------------------- | ---- |
+| 1    | clear_all_data_code_2d_models | 清除所有的二维条码模型并释放它们分配的存储空间             | 242  |
+| 2    | clear_data_code_2d_model      | 清除一个二维条码模型并释放它分配的存储空间                 | 242  |
+| 3    | create_data_code_2d_model     | 创建一个二维条形码阅读器模型                               | 242  |
+| 4    | find_data_code_2d             | 检测和读取一副图像或测试的二维条码编码模式中的二维条码符号 | 242  |
+| 5    | get_data_code_2d_objects      | 查询搜索二维条码符号过程中创建对象的图标                   | 243  |
+| 6    | get_data_code_2d_param        | 获取一个或多个描述二维条码模型的参数                       | 243  |
+| 7    | get_data_code_2d_results      | 搜索二维条码符号过程中累计的字母数字混合编码的结果         | 244  |
+| 8    | query_data_code_2d_params     | 为一个二维数据模型获取通用参数或对象的名字                 | 244  |
+| 9    | read_data_code_2d_model       | 从一个文件中读取一个二维条码模型并新建一个模型             | 244  |
+| 10   | set_data_code_2d_param        | 设置二维条码模型的选定参数                                 | 244  |
+| 11   | write_data_code_2d_model      | 讲一个二维条码模型写入一个文件                             | 246  |
 
 
 
