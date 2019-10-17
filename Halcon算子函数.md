@@ -1080,3 +1080,36 @@
 | 3    | real_to_complex      | 把两个实际图像转变为一个复杂图像   | 283  |
 | 4    | real_to_vector_field | 把两个实值图像转变为一个矢量域图像 | 283  |
 | 5    | vector_field_to_real | 把一个矢量域图像转变为两个实值图像 | 284  |
+
+## Chapter 14 : Inspection (检查)
+
+### 14.1 OCV 字符识别检测
+
+| 序号 | 函数名           | 函数说明及注释                    | 页码 |
+| ---- | ---------------- | --------------------------------- | ---- |
+| 1    | close_all_ocvs   | 关闭所有OCV工具，释放内存空间     | 288  |
+| 2    | close_ocv        | 关闭一个OCV工具，释放内存空间     | 288  |
+| 3    | create_ocv_proj  | 创建一个基于灰度值突出新的OCV工具 | 288  |
+| 4    | do_ocv_simple    | 利用一个OCV工具查证一个模式       | 288  |
+| 5    | read_ocv         | 从文件中读取一个OCV工具           | 288  |
+| 6    | trained_ocv_proj | 测试一个OCV工具                   | 288  |
+| 7    | write_ocv        | 将一个OCV工具保存到文件           | 288  |
+
+### 14.2 Variation Model 变化模型
+
+| 序号 | 函数名                            | 函数说明及注释                   | 页码 |
+| ---- | --------------------------------- | -------------------------------- | ---- |
+| 1    | clear_all_variation_models        | 释放所有变化模型的存储空间       | 289  |
+| 2    | clear_train_data_variation_model  | 释放变化模型的测试数据的存储空间 | 289  |
+| 3    | clear_variation_model             | 释放一个变化模型的存储空间       | 289  |
+| 4    | compare_ext_variation_model       | 将一个图像与一个变化模型相比较   | 289  |
+| 5    | compare_variation_model           | 将一个图像与一个变化模型相比较   | 289  |
+| 6    | create_variation_model            | 创建一个用于图像对比的变化模型   | 289  |
+| 7    | get_thresh_images_variation_model | 提取用于图像对比的阀值图像       | 290  |
+| 8    | get_variation_model               | 返回图像用于图像对比             | 290  |
+| 9    | prepare_direct_variation_model    | 为图像对比准备一个变化模型       | 290  |
+| 10   | prepare_variation_model           | 为图像对比准备一个变化模型       | 290  |
+| 11   | read_variation_model              | 从一个文件中读取一个变化模型     | 290  |
+| 12   | train_variation_model             | 测试一个变化模型                 | 290  |
+| 13   | write_variation_model             | 将一个变化模型写入文件           | 290  |
+
