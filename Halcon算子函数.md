@@ -1113,3 +1113,143 @@
 | 12   | train_variation_model             | 测试一个变化模型                 | 290  |
 | 13   | write_variation_model             | 将一个变化模型写入文件           | 290  |
 
+## Chapter 15 : Matching(匹配)
+
+### 15.1 Component_Based 模件匹配
+
+| 序号 | 函数名                         | 函数说明及注释                                         | 页码 |
+| ---- | ------------------------------ | ------------------------------------------------------ | ---- |
+| 1    | clear_all_component_models     | 释放所有组件匹配模型                                   | 293  |
+| 2    | clear_all_training_components  | 释放所有组件模型                                       | 293  |
+| 3    | clear_component_model          | 释放一个组件匹配模型                                   | 293  |
+| 4    | clear_training_components      | 释放一个组件模型                                       | 293  |
+| 5    | cluster_model_components       | 用于创建模型组件范本结果的新参数                       | 293  |
+| 6    | create_component_model         | 创建一个组件匹配模型                                   | 294  |
+| 7    | create_trained_component_model | 基于组件模型来创建一个组件匹配模型                     | 294  |
+| 8    | find_component_model           | 在一个图像中搜索最佳组件匹配模型                       | 295  |
+| 9    | gen_initial_components         | 提取一个组件模型的最初组件                             | 296  |
+| 10   | get_component_model_params     | 基于确定的组件和关系创建一个组件匹配模型               | 296  |
+| 11   | get_component_model_tree       | 提取组件匹配模型的搜索树                               | 296  |
+| 12   | get_component_relations        | 提取组件模型与样品之间的关系                           | 297  |
+| 13   | get_found_component_model      | 根据搜索到的目标组件来提取所对应的匹配模型跟成分       | 297  |
+| 14   | get_training_components        | 提取一个组件样品模型，根据组件模型和样品图像进行初始化 | 297  |
+| 15   | inspect_clustered_components   | 从组件模型中找出刚性的模型组件                         | 298  |
+| 16   | modify_component_realtions     | 修改一个样品模型中的关系                               | 298  |
+| 17   | read_component_model           | 从一个文件中读取组件匹配模型                           | 298  |
+| 18   | read_training_components       | 从一个文件中读取组件模型结果                           | 298  |
+| 19   | train_model_components         | 为基于组件模型的匹配对应的组件和范本关系               | 298  |
+| 20   | write_component_model          | 把一个组件匹配模型写入一个文件中                       | 299  |
+| 21   | write_training_components      | 把一个组件模型写入到一个文件中                         | 299  |
+
+### 15.2 Correlation-Based 相互关系的基本匹配
+
+| 序号 | 函数名                     | 函数说明及注释                                            | 页码 |
+| ---- | -------------------------- | --------------------------------------------------------- | ---- |
+| 1    | clear_all_ncc_models       | 释放所有NCC（归一化算法，快速匹配）模型的内存             | 299  |
+| 2    | clear_ncc_model            | 释放NCC（归一化算法，快速匹配）模型的内存                 | 300  |
+| 3    | create_ncc_model           | 创建一个NCC（归一化算法，快速匹配）匹配模型               | 300  |
+| 4    | determine_ncc_model_params | 制定NCC（归一化算法，快速匹配）模型参数                   | 300  |
+| 5    | find_ncc_model             | 找出图像中的一个NCC（归一化算法，快速匹配）模型的最佳匹配 | 300  |
+| 6    | get_ncc_model_origin       | 提取一个NCC（归一化算法，快速匹配）模型的原点（参考点）   | 301  |
+| 7    | get_ncc_model_params       | 提取一个NCC（归一化算法，快速匹配）模型的参数             | 301  |
+| 8    | read_ncc_model             | 从一个文件中读取一个NCC（归一化算法，快速匹配）模型       | 301  |
+| 9    | set_ncc_model_origin       | 设置一个NCC（归一化算法，快速匹配）模型的原点（参考点）   | 301  |
+| 10   | set_ncc_model_param        | 设置NCC（归一化算法，快速匹配）模型参数                   | 301  |
+| 11   | write_ncc_model            | 向一个文件中保存NCC（归一化算法，快速匹配）模型           | 301  |
+
+### 15.3 Deformable 可变形匹配
+
+| 序号 | 函数名                                     | 函数说明及注释                                            | 页码 |
+| ---- | ------------------------------------------ | --------------------------------------------------------- | ---- |
+| 1    | clear_all_deformable_models                | 清除所有的可变形模型，释放内存空间                        | 304  |
+| 2    | clear_deformable_model                     | 清除指定的可变形模型，释放内存空间                        | 304  |
+| 3    | create_local_deformable_model              | 创建一个局部的可变形匹配模型                              | 304  |
+| 4    | create_local_deformable_model_xld          | 创建一个局部的可变形XLD匹配模型                           | 305  |
+| 5    | create_planar_calib_deformable_model       | 创建一个（带校正透视的）可变形模型                        | 305  |
+| 6    | create_planar_calib_deformable_model_xld   | 创建一个以XLD轮廓为平面（带校正透视的）可变形模型         | 306  |
+| 7    | create_planar_uncalib_deformable_model     | 创建一个（不带校正透视的）可变形模型                      | 307  |
+| 8    | create_planar_uncalib_deformable_model_xld | 创建一个以XLD轮廓为平面（不带校正透视）可变形模型         | 307  |
+| 9    | determind_deformable_model_params          | 自动测定一个可变形模型的各项参数及对应值                  | 308  |
+| 10   | find_local_deformable_model                | 找出图像中一个局部可变形模型的最佳匹配                    | 308  |
+| 11   | find_planar_calib_deformable_model         | 找出图像中一个校正的可变形模型的最佳匹配并返回他的3D姿势  | 309  |
+| 12   | find_planar_uncalib_deformable_model       | 找出图像中一个不带校正的可变形模型的最佳匹配              | 310  |
+| 13   | get_deformable_model_contours              | 提取一个可变形模型中对应的轮廓                            | 310  |
+| 14   | get_deformable_model_origin                | 提取一个可变形模型的原点（参考点）                        | 310  |
+| 15   | get_deformable_model_params                | 提取一个可变形模型的参数                                  | 310  |
+| 16   | read_deformable_model                      | 从一个文件中读取一个可变形模型                            | 311  |
+| 17   | set_deformable_model_origin                | 设置一个可变形模型的原点（参考点）                        | 311  |
+| 18   | set_deformable_model_param                 | 设置一个可变形模型的参数                                  | 311  |
+| 19   | set_local_deformable_model_metric          | 设置被XLD轮廓产生的可变形模型匹配方法                     | 311  |
+| 20   | set_planar_calib_deformable_model_metric   | 设置被XLD轮廓产生的平面（带校正透视）可变形模型匹配方法   | 311  |
+| 21   | set_planar_uncalib_deformable_model_metric | 设置被XLD轮廓产生的平面（不带校正透视）可变形模型匹配方法 | 311  |
+| 22   | write_deformable_model                     | 将一个可变形模型保存到文件中                              | 312  |
+
+### 15.4 Descriptor-Based 描述符匹配
+
+| 序号 | 函数名                          | 函数说明及注释                             | 页码 |
+| ---- | ------------------------------- | ------------------------------------------ | ---- |
+| 1    | clear_all_descriptor_models     | 清除所有的描述符匹配模型的内存分配         | 312  |
+| 2    | clear_descriptor_model          | 清除一个描述符匹配模型的内存分配           | 312  |
+| 3    | create_calib_descriptor_model   | 创建一个校正透视描述符匹配模型             | 312  |
+| 4    | create_uncalib_descriptor_model | 准备一个描述符匹配模型                     | 313  |
+| 5    | find_calib_descriptor_model     | 在一个图像中寻找最佳校正透视描述符模型     | 313  |
+| 6    | find_uncalib_descriptor_model   | 在一个图像中寻找最佳描述符匹配模型         | 314  |
+| 7    | get_descriptor_model_origin     | 获取描述符模型的参考点                     | 314  |
+| 8    | get_descriptor_model_params     | 获取描述符模型的参数                       | 314  |
+| 9    | get_descriptor_model_points     | 获取描述符模型的兴趣点（字符的笔画定位点） | 314  |
+| 10   | get_descriptor_model_results    | 获取描述符模型的样品                       | 315  |
+| 11   | read_descroptor_model           | 从文件中读取一个描述符模型                 | 315  |
+| 12   | set_descriptor_model_origin     | 为一个描述符模型设置参考点                 | 315  |
+| 13   | write_descriptor_model          | 将一个描述符模型保存（写入）到文件中       | 315  |
+
+### 15.5 Gray-Value-Based 灰度匹配
+
+| 序号 | 函数名                 | 函数说明及注释                         | 页码 |
+| ---- | ---------------------- | -------------------------------------- | ---- |
+| 1    | adapt_template         | 把一个模板用于一个图像的大小           | 316  |
+| 2    | best_match             | 寻找一个模板和一个图像的最佳匹配       | 316  |
+| 3    | best_match_mg          | 在金字塔中寻找最佳灰度值匹配           | 316  |
+| 4    | best_match_pre_mg      | 在预生成的金字塔中寻找最佳灰度值匹配   | 316  |
+| 5    | best_match_rot         | 寻找一个模板和一个旋转图像的最佳匹配   | 317  |
+| 6    | best_match_rot_mg      | 寻找一个模板和一个旋转金字塔的最佳匹配 | 317  |
+| 7    | clear_all_templates    | 清除所有模板的内存分配                 | 317  |
+| 8    | clear_template         | 清除一个模板的内存分配                 | 317  |
+| 9    | create_template        | 为模板匹配准备一个格式                 | 317  |
+| 10   | create_template_rot    | 为旋转模板匹配准备一个格式             | 318  |
+| 11   | fast_match             | 寻找一个模板和一个图像的最佳匹配       | 318  |
+| 12   | fast_match_mg          | 在金字塔中寻找最佳灰度值匹配           | 318  |
+| 13   | read_template          | 从一个文件中读取一个模版               | 318  |
+| 14   | set_offset_template    | 模板的灰度值偏差                       | 318  |
+| 15   | set_reference_template | 为一个匹配模板定义参考位置             | 318  |
+| 16   | write_template         | 向一个文件中写入模板                   | 319  |
+
+### 15.6 Shaped-Based 形状匹配
+
+| 序号 | 函数名                             | 函数说明及注释                                       | 页码 |
+| ---- | ---------------------------------- | ---------------------------------------------------- | ---- |
+| 1    | clear_all_shape_models             | 释放所有轮廓模型的内存                               | 319  |
+| 2    | clear_shape_model                  | 释放一个轮廓模型的内存                               | 319  |
+| 3    | create_aniso_shape_model           | 准备一个x，y方向可缩放比例的匹配轮廓模型             | 319  |
+| 4    | create_aniso_shape_model_xld       | 准备一个x，y方向可缩放比例的匹配XLD轮廓模型          | 320  |
+| 5    | create_scaled_shape_model          | 准备一个可缩放比例的匹配轮廓模型                     | 320  |
+| 6    | create_scaled_shape_model_xld      | 准备一个可缩放比例的匹配轮廓XLD模型                  | 321  |
+| 7    | create_shape_model                 | 准备一个（不可缩放比例的）匹配轮廓模型               | 321  |
+| 8    | create_shape_model_xld             | 准备一个不可缩放比例的匹配XLD轮廓模型                | 322  |
+| 9    | determine_shape_model_params       | 自动测定一个匹配轮廓模型的各项参数及对应值           | 322  |
+| 10   | find_aniso_shape_model             | 在一个图像中找出一个x，y方向可缩放比例的最佳匹配轮廓 | 323  |
+| 11   | find_aniso_shape_models            | 在一个图像中找出多个x，y方向可缩放比例的最佳匹配轮廓 | 324  |
+| 12   | find_scaled_shape_model            | 在一个图像中找出一个可缩放比例的最佳匹配轮廓         | 326  |
+| 13   | find_scaled_shape_models           | 在一个图像中找出多个可缩放比例的最佳匹配轮廓         | 327  |
+| 14   | find_shape_model                   | 在一个图像中找出一个（不可缩放比例的）最佳匹配轮廓   | 329  |
+| 15   | find_shape_models                  | 在一个图像中找出多个（不可缩放比例的）最佳匹配轮廓   | 330  |
+| 16   | get_shape_model_contours           | 返回一个轮廓匹配模型的外形轮廓                       | 332  |
+| 17   | get_shape_model_origin             | 返回一个轮廓匹配模型的原点（参考点）                 | 332  |
+| 18   | get_shape_model_params             | 返回一个轮廓匹配模型的参数                           | 332  |
+| 19   | inspect_shape_model                | 创建一个轮廓匹配模型基于金字塔的图像                 | 332  |
+| 20   | read_shape_model                   | 从一个文件中读取一个轮廓匹配模型                     | 332  |
+| 21   | set_shape_model_metric             | 设置一个轮廓匹配模型的匹配方法                       | 333  |
+| 22   | set_shape_model_origin             | 设置一个轮廓匹配模型的原点（参考点）                 | 333  |
+| 23   | set_shape_model_param              | 设置一个轮廓匹配模型的参数                           | 333  |
+| 24   | write_shape_model                  | 向一个文件中写入一个轮廓匹配模型                     | 333  |
+| 25   | dev_display_shape_matching_results | 显示这个匹配结果                                     | 333  |
+
