@@ -1391,9 +1391,9 @@
 | 14   | erosion2            | 腐蚀一个区域（使用一个参考点）                               | 367  |
 | 15   | erosion_circle      | 腐蚀一个圆形结构基础的一个区域                               | 368  |
 | 16   | erosion_golay       | 腐蚀格雷字母表的一个元素的一个区域                           | 368  |
-| 17   |                     | 腐蚀一个矩形结构基础的一个区域                               | 368  |
-| 18   |                     | 顺序腐蚀一个区域                                             | 368  |
-| 19   |                     | 执行多重结构基础的打开后关闭                                 | 368  |
+| 17   | erosion_rectangle1  | 腐蚀一个矩形结构基础的一个区域                               | 368  |
+| 18   | erosion_seq         | 顺序腐蚀一个区域                                             | 368  |
+| 19   | fitting             | 执行多重结构基础的打开后关闭                                 | 368  |
 | 20   | gen_struct_elements | 生成一个标准结构基础                                         | 369  |
 | 21   | golay_elements      | 生成格雷字母表的结构基础                                     | 369  |
 | 22   | hit_or_miss         | 使一个区域通过指定构成元素进行边影区域提取操作               | 370  |
@@ -1419,4 +1419,104 @@
 | 42   | thinning_golay      | 使一个区域通过Rolay构成元素进行变薄操作                      | 379  |
 | 43   | thinning_seq        | 使一个区域通过Rolay构成元素进行变薄操作（按顺序）            | 379  |
 | 44   | top_hat             | 计算区域的top_hat（原图像和它的开运算之间的差）              | 380  |
+
+## Chapter 18: OCR （光学字符识别）
+
+### 18.1 Hyperboxes
+
+| 序号 | 函数名               | 函数说明及注释                                            | 页码 |
+| ---- | -------------------- | --------------------------------------------------------- | ---- |
+| 1    | close_all_ocrs       | 删除所有OCR句柄模型，释放存储空间，但会丢失所有的测试数据 | 385  |
+| 2    | close_ocr            | 删除一个OCR句柄模型，对应的测试数据将会丢失               | 385  |
+| 3    | create_ocr_class_box | 创建新的OCR分级器                                         | 385  |
+| 4    | do_ocr_multi         | 给每一个字符分配一个类                                    | 385  |
+| 5    | do_ocr_single        | 识别一个字符                                              | 386  |
+| 6    | info_ocr_class_box   | 反馈OCR的有关信息                                         | 386  |
+| 7    | ocr_change_char      | 为字符建立新的查阅表                                      | 386  |
+| 8    | ocr_get_features     | 计算给定字符的特征参数                                    | 386  |
+| 9    | read_ocr             | 从文件中读取OCR分级器                                     | 386  |
+| 10   | testd_ocr_class_box  | 测试给定类中字符的置信度                                  | 386  |
+| 11   | traind_ocr_class_box | 通过一副图像的特定区域直接测试分级器                      | 386  |
+| 12   | trainf_ocr_class_box | 根据指定测试文件测试分级器的OCRHandle                     | 387  |
+| 13   | write_ocr            | 将OCR分级器的OCRHandle写入文件的文件名                    | 387  |
+
+### 18.2 Lexica 词典
+
+| 序号 | 函数名           | 函数说明及注释                                               | 页码 |
+| ---- | ---------------- | ------------------------------------------------------------ | ---- |
+| 1    | clear_all_lexica | 清除所有的词汇（词典），释放它们的资源                       | 388  |
+| 2    | clear_lexicon    | 清除一个词汇（词典），释放相应的资源                         | 388  |
+| 3    | create_lexicon   | 创建一个新的单词列表，输出该词典句柄                         | 388  |
+| 4    | import_lexicon   | 通过文件名选定的文件中的一系列单词创建一个新的词典           | 388  |
+| 5    | inspect_lexicon  | 返回对应参数的词典中所有单词的元祖                           | 388  |
+| 6    | lookup_lexicon   | 检查单词是否在词典的LexiconHandle中，若在返回1否则返回0      | 388  |
+| 7    | suggest_lexicon  | 对单词与所有词汇比较，输出最相似的词汇，给出单个字符错别数量 | 388  |
+
+### 18.3 Neural-Nets 神经网络
+
+| 序号 | 函数名                      | 函数说明及注释                                               | 页码 |
+| ---- | --------------------------- | ------------------------------------------------------------ | ---- |
+| 1    | clear_all_ocr_class_mlp     | 清除所有创建的OCR分类器，释放分类占据的存储空间              | 389  |
+| 2    | clear_ocr_class_mlp         | 清除一个创建的OCR分类器，释放该分类器占据的存储空间          | 389  |
+| 3    | create_ocr_class_mlp        | 利用MLP（多层感知器）创建一个新的OCR分级器                   | 389  |
+| 4    | do_ocr_multi_class_mlp      | 对一组字符区域内容进行识别，输出到Class中去                  | 390  |
+| 5    | do_ocr_single_class_mlp     | 对单个字符区域内容进行识别，按多个匹配字符输出到Class中去    | 390  |
+| 6    | do_ocr_word_mlp             | 对一个词汇字符区域内容进行OCR_mlp模型识别，单字符输出到Class，词汇输出到Word中 | 392  |
+| 7    | get_features_ocr_class_mlp  | 根据OCRHandle确定的字符计算其特征参数，并将它们返回          | 393  |
+| 8    | get_params_ocr_class_mlp    | 返回一个OCR_mlp模型对应的各项参数                            | 393  |
+| 9    | get_prep_info_ocr_class_mlp | 计算OCR分级器预设定矢量特性的信息                            | 393  |
+| 10   | read_ocr_class_mlp          | 从一个文件中读取OCR分级器                                    | 393  |
+| 11   | trainf_ocr_class_mlp        | 测试OCRHandle，根据存储在OCR文件中的测试特性                 | 394  |
+| 12   | write_ocr_class_mlp         | 将OCR分级器的OCRHandle写入由文件名确定的文件中               | 394  |
+
+### 18.4 Segmentation 分割
+
+| 序号 | 函数名                 | 函数说明及注释                                         | 页码 |
+| ---- | ---------------------- | ------------------------------------------------------ | ---- |
+| 1    | clear_all_text_models  | 清除所有的文字模型，释放内存                           | 395  |
+| 2    | clear_all_text_results | 清除所有的文字搜索结果                                 | 395  |
+| 3    | clear_text_model       | 清除一个文字模型，释放内存                             | 395  |
+| 4    | clear_text_result      | 创建一个文字模版                                       | 395  |
+| 5    | create_text_model      | 创建一个文字模版                                       | 395  |
+| 6    | find_text              | 在图像中查找文字片段                                   | 396  |
+| 7    | get_text_model_param   | 查找文字模型参数                                       | 396  |
+| 8    | get_text_object        | 从文本分割片段中提取对应区域数组ResultName中一个片段域 | 396  |
+| 9    | get_text_result        | 从中提取被分割出来的文本片段，并保留到ResultName中     | 396  |
+| 10   | segment_characters     | 将一副图像给定区域的字符分割                           | 396  |
+| 11   | select_characters      | 从一个给定字符区域中分离字符（区域数组）               | 397  |
+| 12   | set_text_model_param   | 设置文字模型参数                                       | 398  |
+| 13   | text_line_orientation  | 提取图像中一个文本行或段落的定向（旋转方向）           | 398  |
+| 14   | text_line_slant        | 提取图像中一个文本行或段落对应字符的倾斜角度           | 399  |
+
+### 18.5 Support-Vertor-Machines 支持向量机
+
+| 序号 | 函数名                               | 函数说明及注释                                      | 页码 |
+| ---- | ------------------------------------ | --------------------------------------------------- | ---- |
+| 1    | clear_all_ocr_class_svm              | 清除所有的基于OCR分级器的SVM，释放相应的存储空间    | 400  |
+| 2    | clear_ocr_class_svm                  | 清除基于OCR分级器的一个SVM，释放相应的存储空间      | 400  |
+| 3    | create_ocr_class_svm                 | 利用支持向量机创建一个OCR分级器                     | 400  |
+| 4    | do_ocr_multi_class_svm               | 根据基于OCR分级器的SVM将大量字符分类                | 400  |
+| 5    | do_ocr_single_class_svm              | 根据基于OCR分级器的SVM将单个字符分类                | 401  |
+| 6    | do_ocr_word_svm                      | 利用OCR分级器将一系列相关字符分类                   | 401  |
+| 7    | get_features_ocr_class_svm           | 计算一个字符的特征                                  | 401  |
+| 8    | get_params_ocr_class_svm             | 返回一个OCR分级器的参数                             | 401  |
+| 9    | get_prep_info_ocr_class_svm          | 计算基于OCR分级器的SVM的预定义特征矢量的信息内容    | 402  |
+| 10   | get_support_vector_num_ocr_class_svm | 返回OCR分级器支持的矢量的数目                       | 402  |
+| 11   | get_support_vector_ocr_class_svm     | 返回基于支持向量机的已测试OCR分级器中支持向量的索引 | 402  |
+| 12   | read_ocr_class_svm                   | 从文件中读取基于OCR分级器的SVM                      | 402  |
+| 13   | reduce_ocr_class_svm                 | 根据一个减小的SVM来接近一个基于OCR分级器的SVM       | 402  |
+| 14   | trainf_ocr_class_svm                 | 测试一个OCR分级器                                   | 402  |
+| 15   | write_ocr_class_svm                  | 将一个OCR分级器 写入文件                            | 403  |
+
+### 18.6 Training-Files 测试夹
+
+| 序号 | 函数名                 | 函数说明及注释                             | 页码 |
+| ---- | ---------------------- | ------------------------------------------ | ---- |
+| 1    | append_ocr_trainf      | 将字符添加到一个测试文件中                 | 403  |
+| 2    | concat_ocr_trainf      | 合并测试文件                               | 403  |
+| 3    | read_ocr_trainf        | 从文件中读取字符，将其转换到图像中         | 403  |
+| 4    | read_ocr_trainf_names  | 查询哪些字符存储在测试文件中               | 403  |
+| 5    | read_ocr_trainf_select | 从文件中读取测试特定字符，将其转换到图像中 | 403  |
+| 6    | write_ocr_trainf       | 将已测试的字符存储到文件中                 | 404  |
+| 7    | write_ocr_trainf_image | 将字符写入正在测试的文件中                 | 404  |
 
