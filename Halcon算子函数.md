@@ -1520,3 +1520,169 @@
 | 6    | write_ocr_trainf       | 将已测试的字符存储到文件中                 | 404  |
 | 7    | write_ocr_trainf_image | 将字符写入正在测试的文件中                 | 404  |
 
+## Chapter 19: Object（对象、目标）
+
+### 19.1 Information 消息
+
+| 序号 | 函数名           | 函数说明及注释             | 页码 |
+| ---- | ---------------- | -------------------------- | ---- |
+| 1    | count_obj        | 统计一个元祖中的对象       | 407  |
+| 2    | get_channel_info | 一幅目标图像组成部分的信息 | 407  |
+| 3    | get_object_class | 一幅目标图像类的名称       | 407  |
+| 4    | test_equal_obj   | 比较目标图像是否相等       | 408  |
+
+### 19.2 Manipulation 纂改
+
+| 序号 | 函数名         | 函数说明及注释                     | 页码 |
+| ---- | -------------- | ---------------------------------- | ---- |
+| 1    | clear_obj      | 将一个目标元祖从HALCON数据库中删除 | 408  |
+| 2    | concat_obj     | 连接两个目标元祖的图标             | 409  |
+| 3    | copy_obj       | 复制一个目标元祖对象               | 409  |
+| 4    | gen_empty_obj  | 创建一个空的目标元祖               | 410  |
+| 5    | integer_to_obj | 将一个整型数转换为一个图标         | 410  |
+| 6    | obj_diff       | 计算两个目标元祖之间的差异         | 410  |
+| 7    | obj_to_integer | 将一个图标转换为一个整型数         | 411  |
+| 8    | select_obj     | 复制一个目标选择的索引部分         | 411  |
+
+## Chapter 20: Regions（区域）
+
+### 20.1 Access 数据
+
+| 序号 | 函数名             | 函数说明及注释                       | 页码 |
+| ---- | ------------------ | ------------------------------------ | ---- |
+| 1    | get_region_chain   | 一个对象的轮廓作为链式码             | 415  |
+| 2    | get_region_contour | 获取一个区域的外围轮廓，各个点的坐标 | 415  |
+| 3    | get_region_convex  | 查询突起的外表作为轮廓               | 416  |
+| 4    | get_region_points  | 查询一个区域的像素点                 | 416  |
+| 5    | get_region_polygon | 获取一个区域的近似多边形             | 417  |
+| 6    | get_region_runs    | 查询一个区域的扫描宽度编码           | 418  |
+
+### 20.2 Creation 创建区域
+
+| 序号 | 函数名                    | 函数说明及注释                          | 页码 |
+| ---- | ------------------------- | --------------------------------------- | ---- |
+| 1    | gen_checker_region        | 创建一个方格式区域                      | 420  |
+| 2    | gen_circle                | 创建一个圆周                            | 420  |
+| 3    | gen_ellipse               | 创建一个椭圆                            | 420  |
+| 4    | gen_empty_region          | 创建一个空的区域                        | 421  |
+| 5    | gen_grid_region           | 创建一个网格区域                        | 421  |
+| 6    | gen_random_region         | 创建一个随机区域                        | 421  |
+| 7    | gen_random_regions        | 创建随机区域如圆周，矩形和椭圆          | 422  |
+| 8    | gen_rectangle1            | 创建一个与坐标轴平行的长方形            | 422  |
+| 9    | gen_rectangle2            | 创建任意方向的矩形                      | 422  |
+| 10   | gen_region_contour_xld    | 从XLD元祖中创建一个区域                 | 423  |
+| 11   | gen_region_histo          | 将一个直方图转换为一个区域              | 423  |
+| 12   | gen_region_hline          | 将Hesse正规形状中描述的输入线存储为区域 | 423  |
+| 13   | gen_region_line           | 将输入线以区域形式存储                  | 423  |
+| 14   | gen_region_points         | 将个别的像素存储为图像区域              | 423  |
+| 15   | gen_region_polygon        | 将一个多边形存储为一个目标图像          | 423  |
+| 16   | gen_region_polygon_filled | 将一个多边形存储为一个已填充区域        | 423  |
+| 17   | gen_region_polygon_xld    | 创建一个XLD多边形中的区域               | 424  |
+| 18   | gen_region_runs           | 创建一个扫描宽度编码中的图像区域        | 424  |
+| 19   | label_to_regions          | 提取一幅图像中灰度值相同的区域          | 424  |
+
+### 20.3 Features 特征
+
+| 序号 | 函数名                       | 函数说明及注释                                               | 页码 |
+| ---- | ---------------------------- | ------------------------------------------------------------ | ---- |
+| 1    | area_center                  | 提取一个区域的面积（大小）和中心                             | 426  |
+| 2    | area_holes                   | 提取一个区域中洞（封闭的裂缝）的面积                         | 426  |
+| 3    | circularity                  | 提取一个区域与圆的相似度的形状系数                           | 427  |
+| 4    | compactness                  | 提取一个区域致密度的形状系数                                 | 427  |
+| 5    | connect_and_holes            | 提取区域中组成部分的数量及该区域中孔的数目                   | 428  |
+| 6    | contlength                   | 提取一个区域轮廓（contour）的长度                            | 429  |
+| 7    | convexity                    | 提取一个区域凸性的形状系数                                   | 429  |
+| 8    | diameter_region              | 提取一个区域中最大的直线距离                                 | 429  |
+| 9    | eccentricity                 | 提取一个类似椭圆的形状系数                                   | 430  |
+| 10   | elliptic_axis                | 提取一个区域中等值（类似于）椭圆的参数                       | 430  |
+| 11   | euler_number                 | 计算区域中存在的区域总数与孔（洞）的数量差异                 | 431  |
+| 12   | find_neighbors               | 提取一个区域的最大距离内的邻域                               | 431  |
+| 13   | get_region_index             | 查找指定位置所在区域的索引值                                 | 431  |
+| 14   | get_region_thickness         | 查询主轴附近区域的宽度（厚度）                               | 432  |
+| 15   | hamming_distance             | 两个区域间的汉明距离                                         | 432  |
+| 16   | hamming_distance_norm        | 两个区域间的归一化汉明距离                                   | 433  |
+| 17   | inner_circle                 | 提取一个区域内部最大的外切圆                                 | 433  |
+| 18   | inner_rectangle1             | 提取一个区域内部最大的矩形                                   | 433  |
+| 19   | moments_region_2nd           | 区域的某时刻几何特性                                         | 434  |
+| 20   | moments_region_2nd_invar     | 区域的某时刻几何特性                                         | 434  |
+| 21   | moments_region_2nd_rel_invar | 计算相关时刻参数                                             | 434  |
+| 22   | moments_region_3rd           | 区域的某时刻几何特性                                         | 434  |
+| 23   | moments_region_3nd_invar     | 区域的某时刻几何特性                                         | 434  |
+| 24   | moments_region_central       | 区域的某时刻几何特性                                         | 435  |
+| 25   | moments_region_central_invar | 区域的某时刻几何特性                                         | 435  |
+| 26   | orientation_region           | 提取一个区域的定向                                           | 435  |
+| 27   | rectangularity               | 提取一个区域对应矩形（长方形）相似程度的形状系数             | 436  |
+| 28   | roundness                    | 提取一个区域轮廓的形状系数                                   | 437  |
+| 29   | runlength_distribution       | 一个区域扫描宽度编码所需的顺串的分配                         | 437  |
+| 30   | runlength_features           | 区域扫描宽度编码的特征值                                     | 438  |
+| 31   | select_region_point          | 选择包括给定像素在内的所有区域                               | 438  |
+| 32   | select_region_spatial        | 根据区域关联提取周边（上、下、左、右）的区域                 | 438  |
+| 33   | select_shape                 | 根据区域要求的特征提取适应的区域                             | 439  |
+| 34   | select_shape_proto           | 选择彼此由某种关系的区域                                     | 440  |
+| 35   | select_shape_std             | 根据给定形状特征提取适应的区域                               | 440  |
+| 36   | smallest_circle              | 提取一区域的最小半径                                         | 441  |
+| 37   | smallest_rectangle1          | 提取包围某区域的最小水平矩形                                 | 441  |
+| 38   | smallest_rectangle2          | 提取包围某区域的最小任意矩形                                 | 442  |
+| 39   | spatial_relation             | 对比一个区域判断其它区域在该区域的哪个方位（上、下、左、右） | 442  |
+| 40   | get_features                 | 提取特征区域和圆                                             | 443  |
+
+### 20.4 Geometric-Transformations 几何变换
+
+| 序号 | 函数名                  | 函数说明及注释                             | 页码 |
+| ---- | ----------------------- | ------------------------------------------ | ---- |
+| 1    | affine_trans_region     | 对区域进行任意的二维变换                   | 444  |
+| 2    | mirror_region           | 对区域进行镜像变换                         | 444  |
+| 3    | move_region             | 对区域进行水平垂直方向移动                 | 445  |
+| 4    | polar_trans_region      | 将一个环状弧内的区域转换为极坐标           | 446  |
+| 5    | polar_trans_region_inv  | 将极坐标中的区域转换为笛卡尔坐标系中的区域 | 446  |
+| 6    | projective_trans_region | 对一个区域进行射影变换                     | 448  |
+| 7    | transpose_region        | 对一个区域以某个点进行旋转                 | 448  |
+| 8    | zoom_region             | 缩放一个区域                               | 448  |
+
+### 20.5 Sets 集合
+
+| 序号 | 函数名          | 函数说明及注释                                             | 页码 |
+| ---- | --------------- | ---------------------------------------------------------- | ---- |
+| 1    | complement      | 返回一个区域的补集（补码），用窗口全部区域减去该区域的差集 | 449  |
+| 2    | difference      | 计算两个区域的差集，第1区域预留部分形成新区域              | 450  |
+| 3    | intersection    | 计算两个区域的交集                                         | 450  |
+| 4    | symm_difference | 计算两个区域对称差异                                       | 451  |
+| 5    | union1          | 返回所有输入区域的并集                                     | 451  |
+| 6    | union2          | 返回两个区域的并集                                         | 451  |
+
+### 20.6 Tests 测试
+
+| 序号 | 函数名             | 函数说明及注释                     | 页码 |
+| ---- | ------------------ | ---------------------------------- | ---- |
+| 1    | test_equal_region  | 检测两个目标区域是否相同           | 452  |
+| 2    | test_region_poing  | 检测一个测试点是否在区域内         | 453  |
+| 3    | rest_subset_region | 检测一个区域是否包含在两一个区域中 | 453  |
+
+### 20.7 Transformation 变换
+
+| 序号 | 函数名                  | 函数说明及注释                       | 页码 |
+| ---- | ----------------------- | ------------------------------------ | ---- |
+| 1    | background_seq          | 决定给定区域背景相连的部分           | 453  |
+| 2    | clip_region             | 将一个区域修改为矩形                 | 454  |
+| 3    | clip_region_rel         | 根据大小修改一个区域                 | 454  |
+| 4    | closest_point_transform | 计算这个区域中距离变换的闭点         | 455  |
+| 5    | connection              | 计算一个区域相连接的部分             | 455  |
+| 6    | distance_transform      | 计算一个区域的距离变换               | 456  |
+| 7    | eliminate_runs          | 消除一个给定宽度的顺串               | 457  |
+| 8    | expand_region           | 填充区域间的间隙或分离互相重叠区域   | 457  |
+| 9    | fill_up                 | 填充区域中的孔，裂缝等               | 458  |
+| 10   | fill_up_shape           | 填充拥有给定图形特征区域的中断       | 458  |
+| 11   | hamming_change_region   | 创建一个有给定汉明距离的区域         | 459  |
+| 12   | interjacent             | 利用给定区域分割图像                 | 460  |
+| 13   | junctions_skeleton      | 找出框架中的结点和终点               | 460  |
+| 14   | merge_regions_line_scan | 从行扫描图像合并区域                 | 461  |
+| 15   | partition_dynamic       | 在较小垂直范围的位置水平分割一个区域 | 461  |
+| 16   | partition_rectangle     | 将一个区域分割为等大的矩形           | 462  |
+| 17   | rank_region             | 给对区域的大小进行归类               | 462  |
+| 18   | remove_noise_region     | 去除一个区域内的噪声                 | 463  |
+| 19   | shape_trans             | 改变一个区域的形状                   | 463  |
+| 20   | skeleton                | 计算一个区域的框架                   | 463  |
+| 21   | sort_region             | 根据相邻位置归类区域                 | 464  |
+| 22   | split_skeleton_lines    | 用一个像素宽，没有分支的线来分离线   | 465  |
+| 23   | split_skeleton_region   | 用一个像素宽，没有分支的区域来分离线 | 466  |
+
