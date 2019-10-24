@@ -1686,3 +1686,214 @@
 | 22   | split_skeleton_lines    | 用一个像素宽，没有分支的线来分离线   | 465  |
 | 23   | split_skeleton_region   | 用一个像素宽，没有分支的区域来分离线 | 466  |
 
+## Chapter 21: Segmentation（分割）
+
+### 21.1 Classification 类别分割
+
+| 序号 | 函数名                      | 函数说明及注释                                               | 页码 |
+| ---- | --------------------------- | ------------------------------------------------------------ | ---- |
+| 1    | add_samples_image_class_gmm | 将从图像中获取的测试样本添加到高斯混合模型的测试数据库中     | 469  |
+| 2    | add_samples_image_class_mlp | 将从图像中获取的测试样本添加到多层感知器模型的测试数据库中   | 469  |
+| 3    | add_samples_image_class_svm | 将从图像中获取的测试样本添加到一个支持向量机模型的测试数据库中 | 469  |
+| 4    | class_2dim_sup              | 采用二维空间像素分类分割图像                                 | 469  |
+| 5    | class_2dim_unsup            | 将两幅图像以聚类分割                                         | 470  |
+| 6    | class_ndim_box              | 利用立方体将像素分类                                         | 470  |
+| 7    | class_ndim_borm             | 利用球体或立方体将像素分类                                   | 471  |
+| 8    | classify_image_class_gmm    | 根据高斯混合模式分类图像                                     | 472  |
+| 9    | classify_image_class_lut    | 根据颜色查找表模式分类图像                                   | 472  |
+| 10   | classify_image_class_mlp    | 根据多层感知器分类图像                                       | 474  |
+| 11   | classify_image_class_svm    | 根据支持向量机分类图像                                       | 475  |
+| 12   | learn_ndim_box              | 利用多通道图像测试一个分级器                                 | 476  |
+| 13   | learn_ndim_norm             | 为class_ndim_norm构建类                                      | 476  |
+
+### 21.2 Edges 边界分割
+
+| 序号 | 函数名                 | 函数说明及注释                         | 页码 |
+| ---- | ---------------------- | -------------------------------------- | ---- |
+| 1    | detect_edge_segments   | 图像中检测直线边缘分割                 | 476  |
+| 2    | hysteresis_threshold   | 对一副图像采取磁滞门限进行分割         | 477  |
+| 3    | nonmax_suppression_amp | 抑制一幅图像上的非最大值点             | 477  |
+| 4    | nonmax_suppression_dir | 利用指定图像抑制一幅图像上的非最大值点 | 478  |
+
+### 21.3 Regiongrowing 区域分割
+
+| 序号 | 函数名             | 函数说明及注释                                   | 页码 |
+| ---- | ------------------ | ------------------------------------------------ | ---- |
+| 1    | expand_gray        | 依据灰度值或颜色填充两个区域的间隙或分割重叠区域 | 478  |
+| 2    | expand_gray_ref    | 依据灰度值或颜色填充两个区域的间隙或分割重叠区域 | 479  |
+| 3    | expand_line        | 从给定线开始扩充区域                             | 479  |
+| 4    | regiongrowing      | 利用区域增长分割图像                             | 480  |
+| 5    | regiongrowing_mean | 利用平均灰度值执行区域增长                       | 481  |
+| 6    | regiongrowing_n    | 利用区域增长为多通道图像分割图像                 | 482  |
+
+### 21.4 Threshold 门槛值分割
+
+| 序号 | 函数名                | 函数说明及注释                                       | 页码 |
+| ---- | --------------------- | ---------------------------------------------------- | ---- |
+| 1    | auto_threshold        | 根据直方图决定的阀值分割图像                         | 483  |
+| 2    | bin_threshold         | 根据自动产生的阀值分割图像                           | 483  |
+| 3    | char_threshold        | 为提取的字符产生一个分割图像                         | 484  |
+| 4    | check_threshold       | 一个像素一个像素的比较两幅图像                       | 484  |
+| 5    | dual_threshold        | 对指定的图像作门限操作                               | 485  |
+| 6    | dyn_threshold         | 利用局部阀值（区域的明亮或黑暗）分割图像             | 485  |
+| 7    | fast_threshold        | 利用全局阀值快速将图像二值化                         | 486  |
+| 8    | histo_to_thresh       | 根据直方图决定灰度值门限                             | 487  |
+| 9    | threshold             | 利用全局阀值分割图像                                 | 487  |
+| 10   | threshold_sub_pix     | 根据子像素的标准性从一副图像中提取水平（平坦）交叉口 | 488  |
+| 11   | var_threshold         | 根据局域平均标注偏差分析将图像二值化                 | 488  |
+| 12   | zero_crossing         | 从一幅图像中提取零相交                               | 489  |
+| 13   | zero_crossing_sub_pix | 根据子像素准确性从一幅图像中提取零相交               | 489  |
+
+### 21.5 Topography 灰度分割
+
+| 序号 | 函数名                  | 函数说明及注释                         | 页码 |
+| ---- | ----------------------- | -------------------------------------- | ---- |
+| 1    | critical_points_sub_pix | 对一幅图像中的鞍点进行精确检测         | 490  |
+| 2    | local_max               | 检测一幅图像中所有的最大数             | 491  |
+| 3    | local_max_sub_pix       | 一幅图像中局域最大数的子像素精确度检测 | 491  |
+| 4    | local_min               | 检测一幅图像中所有的最小数             | 492  |
+| 5    | local_min_sub_pix       | 一幅图像中局域最小数的子像素精确度检测 | 493  |
+| 6    | lowlands                | 检测凹地所有灰度值                     | 493  |
+| 7    | lowlands_center         | 检测凹地所有灰度值的中心               | 493  |
+| 8    | plateaus                | 检测所有平稳状态灰度值                 | 494  |
+| 9    | plateaus_center         | 检测所有平稳状态灰度值的中心           | 494  |
+| 10   | pouring                 | 根据大于“pouring_water”分割图像        | 495  |
+| 11   | saddle_points_sub_pix   | 一幅图像中底部点的子像素精确度检测     | 495  |
+| 12   | watersheds              | 从一幅图像中提取分界线和“盆地”         | 496  |
+| 13   | watersheds_threshold    | 利用阀值从一幅图像中提取“分水岭盆地”   | 496  |
+
+## Chapter 22: System（系统）
+
+### 22.1 Compute Devices   计算手段
+
+| 序号 | 函数名                          | 函数说明及注释                     | 页码 |
+| ---- | ------------------------------- | ---------------------------------- | ---- |
+| 1    | activate_compute_device         | 激活指定计算设备（工业相机）       | 501  |
+| 2    | deactivate_all_compute_devices  | 解除所有计算设备（工业相机）       | 501  |
+| 3    | deactivate_compute_device       | 解除指定计算设备（工业相机）       | 501  |
+| 4    | get_compute_device_info         | 获取指定计算设备的信息（工业相机） | 501  |
+| 5    | get_compute_device_param        | 获取指定计算设备（工业相机）的参数 | 501  |
+| 6    | init_compute_device             | 初始化指定计算设备（工业相机）     | 501  |
+| 7    | open_compute_device             | 打开一个计算设备（工业相机）       | 502  |
+| 8    | query_available_compute_devices | 获取可用的计算设备（工业相机）     | 502  |
+| 9    | release_all_compute_devices     | 关闭所有的计算设备（工业相机）     | 502  |
+| 10   | release_compute_device          | 关闭指定的计算设备（工业相机）     | 502  |
+| 11   | set_compute_device_param        | 设置指定的计算设备（工业相机）参数 | 502  |
+
+### 22.2 Database 数据库
+
+| 序号 | 函数名         | 函数说明及注释             | 页码 |
+| ---- | -------------- | -------------------------- | ---- |
+| 1    | count_relation | 在HALCON数据库中实体的数目 | 502  |
+| 2    | get_modules    | 查询已使用模块和模块关键码 | 502  |
+| 3    | reset_obj_db   | HALCON系统的初始化         | 503  |
+
+### 22.3 Error-Handing 错误处理
+
+| 序号 | 函数名         | 函数说明及注释                 | 页码 |
+| ---- | -------------- | ------------------------------ | ---- |
+| 1    | get_check      | HALCON控制模式下被激活的列表   | 503  |
+| 2    | get_error_text | 查询HALCON错误测试后错误数目   | 503  |
+| 3    | get_spy        | HALCON调试工具当前配置         | 503  |
+| 4    | query_spy      | 查询HALCON调试工具激活的设置   | 503  |
+| 5    | set_check      | 设置被激活和钝化HALCON控制模式 | 503  |
+| 6    | set_spy        | 设置HALCON控制模式的状态       | 503  |
+
+### 22.4 Information  数据相关信息
+
+| 序号 | 函数名              | 函数说明及注释                             | 页码 |
+| ---- | ------------------- | ------------------------------------------ | ---- |
+| 1    | get_chapter_info    | 获取程序有关章节的信息                     | 504  |
+| 2    | get_keywords        | 获取指定给程序的关键字                     | 504  |
+| 3    | get_operator_info   | 获取关于HALCON程序的信息                   | 504  |
+| 4    | get_operator_name   | 获取由给定字符串作为它们的名字的程序       | 504  |
+| 5    | get_param_info      | 获取关于程序参数的信息                     | 504  |
+| 6    | get_param_names     | 获取一个HALCON程序参数的名字               | 505  |
+| 7    | get_param_num       | 获取一个HALCON程序不同参数类的数目         | 505  |
+| 8    | get_param_types     | 获取一个HALCON程序控制参数的缺省数据类型   | 505  |
+| 9    | query_operator_info | 联合操作get_operator_info查询空挡相关信息  | 505  |
+| 10   | query_param_info    | 查询关于操作get_param_info的空挡的在线信息 | 505  |
+| 11   | search_operator     | 在程序进程中寻找一个关键字                 | 505  |
+
+### 22.5 Multithreading	多线程
+
+| 序号 | 函数名               | 函数说明及注释                                 | 页码 |
+| ---- | -------------------- | ---------------------------------------------- | ---- |
+| 1    | broadcast_condition  | 同步信号状态，复位所有正在等候的线程           | 506  |
+| 2    | clear_all_barriers   | 清除所有的排斥对象                             | 506  |
+| 3    | clear_all_conditions | 清除所有信号对象                               | 506  |
+| 4    | clear_all_events     | 清除所有的事件对象                             | 506  |
+| 5    | clear_all_mutexed    | 清除所有的互斥对象                             | 506  |
+| 6    | clear_barrier        | 清除指定的排斥对象                             | 506  |
+| 7    | clear_condition      | 清除指定信号对象                               | 506  |
+| 8    | clear_event          | 清除指定的事件对象                             | 507  |
+| 9    | clear_mutex          | 清除指定的互斥对象                             | 507  |
+| 10   | create_barrier       | 创建一个排斥对象                               | 507  |
+| 11   | create_condition     | 创建一个信号对象                               | 507  |
+| 12   | create_event         | 创建一个事件对象                               | 507  |
+| 13   | create_mutex         | 创建一个互斥对象                               | 507  |
+| 14   | get_threading_attrib | 提取线程的属性                                 | 507  |
+| 15   | lock_mutex           | 锁一个互斥对象                                 | 507  |
+| 16   | signal_condition     | 信号对象的状态                                 | 507  |
+| 17   | signal_event         | 开启事件对象                                   | 508  |
+| 18   | timed_wait_condition | 等到同步信号跳转                               | 508  |
+| 19   | try_lock_mutex       | 试图锁上一个互斥对象                           | 508  |
+| 20   | try_wait_event       | 试图对一个事件进行上锁，一旦上锁，只有它能解锁 | 508  |
+| 21   | unlock_mutex         | 解锁一个互斥对象                               | 508  |
+| 22   | wait_barrier         | 等待释放一个排斥对象                           | 508  |
+| 23   | wait_condition       | 等待一个信号对象                               | 508  |
+| 24   | wait_event           | 等待指定事件的发生                             | 508  |
+
+### 22.6 Operating-System	操作系统
+
+| 序号 | 函数名        | 函数说明及注释 | 页码 |
+| ---- | ------------- | -------------- | ---- |
+| 1    | count_senonds | 衡量时间       | 509  |
+| 2    | system_call   | 执行系统请求   | 509  |
+| 3    | wait_senonds  | 延迟操作的执行 | 509  |
+
+### 22.7 Parallelization	自动操作并行化（多核）
+
+### 22.8 Parameters 参数
+
+| 序号 | 函数名     | 函数说明及注释                       | 页码 |
+| ---- | ---------- | ------------------------------------ | ---- |
+| 1    | get_system | 根据HALCON系统参数获取关于当前的信息 | 509  |
+| 2    | set_system | HALCON系统参数的设置                 | 509  |
+
+### 22.9 Seial	串行操作
+
+| 序号 | 函数名            | 函数说明及注释             | 页码 |
+| ---- | ----------------- | -------------------------- | ---- |
+| 1    | clear_serial      | 清除一个串行设备的缓冲内存 | 510  |
+| 2    | close_all_serials | 关闭所有的串行设备         | 510  |
+| 3    | close_serial      | 关闭一个串行设备           | 510  |
+| 4    | get_serial_param  | 获取一个串行设备的参数     | 510  |
+| 5    | open_serial       | 打开一个串行设备           | 510  |
+| 6    | read_serial       | 读取一个串行设备           | 511  |
+| 7    | set_serial_param  | 设置一个串行设备的参数     | 511  |
+| 8    | write_serial      | 写入一个串行设备           | 511  |
+
+### 22.10 Sockets	套接字（网络）
+
+| 序号 | 函数名                    | 函数说明及注释                               | 页码 |
+| ---- | ------------------------- | -------------------------------------------- | ---- |
+| 1    | close_socket              | 关闭一个网络                                 | 512  |
+| 2    | get_next_socket_data_type | 决定下一个网络数据的HALCON数据类型           | 512  |
+| 3    | get_socket_descriptor     | 获取一个网络的描述符                         | 513  |
+| 4    | get_socket_param          | 获取一个网络的参数                           | 513  |
+| 5    | open_socket_accept        | 打开一个接受连接请求的网络                   | 513  |
+| 6    | open_socket_connect       | 打开一个已存在的网络                         | 513  |
+| 7    | receive_data              | 接收外部设备或一般信息通信工具发送过来的数据 | 513  |
+| 8    | receive_image             | 通过网络接收一副图像                         | 513  |
+| 9    | receive_region            | 通过网络接收区域                             | 513  |
+| 10   | receive_tuple             | 通过网络接收一个元祖                         | 514  |
+| 11   | receive_xld               | 通过网络接收一个XLD对象                      | 514  |
+| 12   | send_data                 | 发送任意数据到外部设备或一般的信息通信工具   | 514  |
+| 13   | send_image                | 通过网络发送一副图像                         | 514  |
+| 14   | send_region               | 通过网络发送区域                             | 514  |
+| 15   | send_tuple                | 通过网络发送一个元祖                         | 514  |
+| 16   | send_xld                  | 通过网络发送一个XLD对象                      | 515  |
+| 17   | set_socket_timeout        | 设置一个网络连接的超时                       | 515  |
+| 18   | socket_accept_connect     | 接受一个监听网络的连接请求                   | 515  |
+
