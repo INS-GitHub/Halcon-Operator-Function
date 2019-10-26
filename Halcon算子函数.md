@@ -1897,3 +1897,129 @@
 | 17   | set_socket_timeout        | 设置一个网络连接的超时                       | 515  |
 | 18   | socket_accept_connect     | 接受一个监听网络的连接请求                   | 515  |
 
+## Chapter 23 : Tools(工具)
+
+### 23.1 	Background-Estimator	评估背景
+
+| 序号 | 函数名             | 函数说明及注释                     | 页码 |
+| ---- | ------------------ | ---------------------------------- | ---- |
+| 1    | close_all_bg_esti  | 清除所有的背景评估数据集           | 519  |
+| 2    | close_bg_esti      | 清除背景估测数据集                 | 519  |
+| 3    | create_bg_esti     | 创建一个背景评估数据集并进行初始化 | 519  |
+| 4    | get_bg_esti_params | 提取一个数据集的参数               | 520  |
+| 5    | give_bg_esti       | 提取一个背景评估图像               | 520  |
+| 6    | run_bg_esti        | 评估背景并返回前景区域             | 520  |
+| 7    | set_bg_esti_params | 设置背景评估数据集的参数           | 520  |
+| 8    | update_bg_esti     | 改变估测背景图像                   | 520  |
+
+### 23.2	Function	函数
+
+| 序号 | 函数名                  | 函数说明及注释                   | 页码 |
+| ---- | ----------------------- | -------------------------------- | ---- |
+| 1    | abs_funct_1d            | Y值的绝对值                      | 522  |
+| 2    | compose_funct_1d        | 组合两个函数操作                 | 522  |
+| 3    | create_funct_1d_array   | 从Y值的序列中创建一个函数        | 522  |
+| 4    | create_funct_1d_pairs   | 从（X、Y）集合中创建一个函数     | 522  |
+| 5    | derivate_funct_1d       | 计算一个函数的派生物             | 522  |
+| 6    | distance_funct_1d       | 计算两个函数的间隔               | 523  |
+| 7    | funct_1d_to_pairs       | 查询一个函数的（X、Y）值         | 523  |
+| 8    | get_pair_funct_1d       | 根据控制点的索引查询一个函数值   | 523  |
+| 9    | get_y_value_funct_1d    | 返回任意位置函数的值             | 524  |
+| 10   | integrate_funct_1d      | 计算一个函数的正区域和负区域     | 524  |
+| 11   | invert_funct_1d         | 计算一个函数的反转               | 524  |
+| 12   | local_min_max_funct_1d  | 计算一个函数的局域最小和最大值点 | 524  |
+| 13   | match_funct_1d_trans    | 计算两个函数传递参数             | 525  |
+| 14   | negate_funct_1d         | 对Y值取非（反）                  | 525  |
+| 15   | num_points_funct_1d     | 函数控制点的数目                 | 525  |
+| 16   | read_funct_1d           | 从文件中读取一个函数             | 526  |
+| 17   | sample_funct_1d         | 再间隔区等距取样                 | 526  |
+| 18   | scale_y_funct_1d        | 将Y值相乘和相加                  | 526  |
+| 19   | smooth_funct_1d_gauss   | 采用高斯函数平滑一个等距一维函数 | 526  |
+| 20   | smooth_funct_1d_mean    | 采用平均函数平滑一个等距一维函数 | 527  |
+| 21   | transform_funct_1d      | 根据给定传递参数变换一个函数     | 527  |
+| 22   | write_funct_1d          | 将一个函数写入一个文件           | 527  |
+| 23   | x_range_funct_1d        | 函数的最小和最大X值              | 527  |
+| 24   | y_range_funct_1d        | 函数的最小和最大Y值              | 527  |
+| 25   | zero_crossings_funct_1d | 计算一个函数的的零点             | 528  |
+
+### 23.3	Geometry	几何学
+
+| 序号 | 函数名              | 函数说明及注释                                   | 页码 |
+| ---- | ------------------- | ------------------------------------------------ | ---- |
+| 1    | angle_ll            | 计算两条线的夹角                                 | 528  |
+| 2    | angle_lx            | 计算一条线与垂直轴之间的角度                     | 529  |
+| 3    | distance_cc         | 计算两个轮廓间的距离                             | 529  |
+| 4    | distance_cc_min     | 计算两个轮廓间的最小距离                         | 530  |
+| 5    | distance_lc         | 计算一条线和一个轮廓间的距离                     | 530  |
+| 6    | distance_lr         | 计算一条线和一个区域间的距离                     | 530  |
+| 7    | distance_pc         | 计算一个点和一个轮廓间的距离                     | 531  |
+| 8    | distance_pl         | 计算一个点和一条线间的直交距离                   | 532  |
+| 9    | distance_pp         | 计算两个点之间的直线距离                         | 533  |
+| 10   | distance_pr         | 计算一个点和一个区域间的距离                     | 534  |
+| 11   | distance_ps         | 计算一个点和一条线段间的距离                     | 534  |
+| 12   | distance_rr_min     | 计算两个相邻区域之间的最小距离，并给出对应的坐标 | 535  |
+| 13   | distance_rr_min_dil | 计算两个区域间的最小距离                         | 536  |
+| 14   | distance_sc         | 计算一条线段和一个轮廓间的距离                   | 536  |
+| 15   | distance_sl         | 计算一条线段和一条线间的距离                     | 537  |
+| 16   | distance_sr         | 计算一条线段和一个区域间的距离                   | 537  |
+| 17   | distance_ss         | 计算两条线段间的距离                             | 537  |
+| 18   | get_points_ellipse  | 计算椭圆上特定角度的一个点                       | 538  |
+| 19   | intersection_ll     | 计算两条线的交集点（相交点）                     | 539  |
+| 20   | projection_pl       | 计算一条线上的一个点的投影                       | 540  |
+| 21   | sort_pairs          | 成对分类                                         | 540  |
+
+### 23.4	Grid-Rectification	网络
+
+| 序号 | 函数名                       | 函数说明及注释                                       | 页码 |
+| ---- | ---------------------------- | ---------------------------------------------------- | ---- |
+| 1    | connect_grid_points          | 简历矫正网络的各格点间的连接                         | 541  |
+| 2    | create_rectification_grid    | 建立一个附文件，描述矫正网络                         | 541  |
+| 3    | find_rectification_grid      | 分割图像中网络区域                                   | 541  |
+| 4    | gen_arbitrary_distortion_map | 产生一个投射图，其描述随意扭曲图像与正确图像间的映射 | 541  |
+| 5    | gen_grid_rectification_map   | 计算扭曲图像与基于规律的网格的正确的图像的映射       | 542  |
+
+### 23.5	Hough	（hough变换）
+
+| 序号 | 函数名                | 函数说明及注释                                 | 页码 |
+| ---- | --------------------- | ---------------------------------------------- | ---- |
+| 1    | hough_circle_trans    | 返回指定半径的圆周的Hough变换                  | 543  |
+| 2    | hough_circles         | 特定半径的圆周的中心                           | 543  |
+| 3    | hough_line_trans      | 对区域中的线进行Hough变换                      | 544  |
+| 4    | hough_line_trans_dir  | 利用局部方向梯度对线进行Hough变换              | 544  |
+| 5    | hough_lines           | 借助Hough变化查询图像中的线，并将其返回到HNF中 | 544  |
+| 6    | hough_lines_dir       | 采用局部方向梯度的Hough变换查询图像中的线      | 544  |
+| 7    | select_matching_lines | 选取HNF中线的集合中匹配区域最好的线            | 545  |
+
+### 23.6	Kalman-Filter	卡尔曼滤波器
+
+| 序号 | 函数名        | 函数说明及注释                     | 页码 |
+| ---- | ------------- | ---------------------------------- | ---- |
+| 1    | filter_kalman | 借助卡尔曼滤波器估测系统的当前状态 | 545  |
+| 2    | read_kalman   | 读取一个卡尔曼滤波器的说明文件     | 545  |
+| 3    | update_kalman | 读取一个卡尔曼滤波器的更新文件     | 545  |
+
+### 23.7	Lines	线性
+
+| 序号 | 函数名               | 函数说明及注释               | 页码 |
+| ---- | -------------------- | ---------------------------- | ---- |
+| 1    | approx_chain         | 通过弧和线近似一个轮廓       | 546  |
+| 2    | approx_chain_simple  | 通过弧和线近似一个轮廓       | 546  |
+| 3    | line_orientation     | 计算线的方位                 | 547  |
+| 4    | line_position        | 计算一条线的重心、长度和方位 | 547  |
+| 5    | partition_lines      | 通过特征选择分割线段         | 548  |
+| 6    | select_lines         | 通过特征选择线               | 548  |
+| 7    | select_lines_longest | 选择最长输入线               | 549  |
+
+### 23.8	Mosaicking	（马赛克图像）
+
+| 序号 | 函数名                          | 函数说明及注释                                           | 页码 |
+| ---- | ------------------------------- | -------------------------------------------------------- | ---- |
+| 1    | adjust_mosaic_images            | 全景图像的自动颜色更改                                   | 549  |
+| 2    | bundle_adjust_mosaic            | 对一幅图像的嵌合体采取一系列校正                         | 549  |
+| 3    | gen_bundle_adjusted_mosaic      | 把多重图像合成一个马赛克图像                             | 550  |
+| 4    | gen_cube_map_mosaic             | 创建立方体马赛克图像（含6方位图像）                      | 550  |
+| 5    | gen_projective_mosaic           | 把多重图像合成一个马赛克图像                             | 550  |
+| 6    | gen_spherical_mosaic            | 创建一个球形马赛克图像                                   | 551  |
+| 7    | proj_match_points_ransack       | 找两图图像中点与点之间的映射计算一个投影变换矩阵         | 551  |
+| 8    | proj_match_points_ransac_guided | 找两个图像中点与点和一个近似变换矩阵来计算投射变形点阵式 | 552  |
+
