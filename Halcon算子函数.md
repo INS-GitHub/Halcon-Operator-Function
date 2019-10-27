@@ -2257,3 +2257,129 @@
 | 12   | tuple_strrstr        | 向后搜索一个位于字符串元组内的字符串        | 590  |
 | 13   | tuple_strstr         | 向前搜索一个位于字符串元组内的字符串        | 590  |
 
+## Chapter 26 : XLD	轮廓处理
+
+### 26.1	Access	数据
+
+| 序号 | 函数名            | 函数说明及注释        | 页码 |
+| ---- | ----------------- | --------------------- | ---- |
+| 1    | get_contour_xld   | 返回XLD轮廓的坐标     | 593  |
+| 2    | get_lines_xld     | 返回一个XLD多边形数据 | 593  |
+| 3    | get_parallers_xld | 返回一个XLD并行数据   | 594  |
+| 4    | get_polygon_xld   | 返回一个XLD多边形数据 | 595  |
+
+### 26.2	Creation	创建
+
+| 序号 | 函数名                          | 函数说明及注释                                            | 页码 |
+| ---- | ------------------------------- | --------------------------------------------------------- | ---- |
+| 1    | gen_circle_contour_xld          | 创建一个圆或圆弧轮廓                                      | 596  |
+| 2    | gen_contor_nurbs_xld            | 将一个NURBS曲线转换为一个XLD轮廓                          | 596  |
+| 3    | gen_contour_polygon_rounded_xld | 根据一个多边形（以元组形式给出）的圆形角点创建一个XLD轮廓 | 597  |
+| 4    | gen_contour_polygon_xld         | 根据一个多边形（以元组形式给出）创建一个XLD轮廓           | 597  |
+| 5    | gen_contour_region_xld          | 根据区域创建XLD轮廓                                       | 598  |
+| 6    | gen_contours_skeleton_xld       | 将骨骼框架转换为XLD轮廓                                   | 598  |
+| 7    | gen_cross_contour_xld           | 根据每个输入点交叉的形状创建一个XLD轮廓                   | 599  |
+| 8    | gen_ellipse_contour_xld         | 根据相应的椭圆弧创建一个XLD轮廓                           | 599  |
+| 9    | gen_nurbs_interp                | 创建一个NURBS曲线轮廓                                     | 600  |
+| 10   | gen_parallels_xld               | 提取并行XLD多边形                                         | 600  |
+| 11   | gen_polygons_xld                | 根据多边形近似创建XLD轮廓                                 | 601  |
+| 12   | gen_rectangle2_contour_xld      | 创建一个矩形XLD轮廓                                       | 601  |
+| 13   | mod_parallels_xld               | 提取一个包括同质区域的并行XLD多边形，清除多重并行线       | 602  |
+| 14   | gen_arrow_contour_xld           | 创建箭头形状的轮廓                                        | 602  |
+
+### 26.3	Features	特征
+
+| 序号 | 函数名                             | 函数说明及注释                                               | 页码 |
+| ---- | ---------------------------------- | ------------------------------------------------------------ | ---- |
+| 1    | area_center_points_xld             | 被看做点云的轮廓和多边形的面积和重心                         | 604  |
+| 2    | area_center_xld                    | 轮廓和多边形的面积和重心                                     | 604  |
+| 3    | circularity_xld                    | 影响轮廓或多边形圆度（与圆相近的程度）的形状系数             | 604  |
+| 4    | compactness_xld                    | 影响轮廓或多边形致密性的形状系数                             | 604  |
+| 5    | contour_point_num_xld              | 返回一个XLD轮廓上点的数目                                    | 604  |
+| 6    | convexity_xld                      | 影响轮廓或多边形凹凸性的形状系数                             | 604  |
+| 7    | diameter_xld                       | 两个轮廓或多边形上的点与指定坐标的直线距离                   | 605  |
+| 8    | dist_ellipse_contour_points_xld    | 计算所有轮廓边沿上所有点到一个椭圆边沿最近的距离             | 605  |
+| 9    | dist_ellipse_cnotour_xld           | 轮廓到一个椭圆的最近距离的最小、最大、平均、标准差           | 605  |
+| 10   | dist_rectangle2_contour_points_xld | 计算所有轮廓边沿上所有点到一个矩形边沿最近的距离             | 605  |
+| 11   | eccentricity_points_xld            | 提取一个等高线轮廓或多边形的对称性                           | 605  |
+| 12   | eccentricity_xld                   | 提取一个等高线轮廓或多边形的对称性和肥胖型                   | 606  |
+| 13   | elliptic_axis_points_xld           | 提取类似椭圆的轮廓线或多边形的等价椭圆参数                   | 606  |
+| 14   | elliptic_axis_xld                  | 提取类似椭圆的轮廓线或多边形的等价椭圆参数                   | 606  |
+| 15   | fit_circle_contour_xld             | 根据一个类似圆（或圆弧）的等高线轮廓来提取一个标准圆         | 606  |
+| 16   | fit_ellipse_contour_xld            | 根据一个类似于椭圆（或椭圆弧）的等高线轮廓来提取一个标注椭圆 | 607  |
+| 17   | fit_line_contour_xld               | 根据一个类似线的等高线轮廓来提取一个标准差                   | 609  |
+| 18   | fit_rectangle2_contour_xld         | 根据一个类似矩形的等高线轮廓来提取一个标准的矩形             | 610  |
+| 19   | get_contour_angle_xld              | 为每个轮廓点计算一个XLD轮廓方向                              | 611  |
+| 20   | get_contour_attrib_xld             | 返回一个XLD轮廓的点的特征值                                  | 611  |
+| 21   | get_contour_global_attrib_xld      | 返回一个XLD轮廓的全局特征值                                  | 611  |
+| 22   | get_regress_params_xld             | 返回XLD轮廓参数                                              | 612  |
+| 23   | info_parallels_xld                 | 返回被XLD多边形包围的区域的平行质量及灰度值的信息            | 612  |
+| 24   | length_xld                         | 轮廓或多边形的长度                                           | 613  |
+| 25   | local_max_contours_xld             | 选择局域最大灰度值的XLD轮廓                                  | 613  |
+| 26   | max_parallers_xld                  | 最大化的合并或延长并行轮廓                                   | 613  |
+| 27   | moments_any_points_xld             | 被看做点云的轮廓或多边形的任意几何时刻                       | 614  |
+| 28   | moments_any_xld                    | 轮廓或多边形的任意几何时刻                                   | 614  |
+| 29   | moments_points_xld                 | 被看做点云的轮廓或多边形的几何时刻M20, M02, 和M11            | 614  |
+| 30   | moments_xld                        | 轮廓或多边形的几何时刻M20, M02, 和M11                        | 615  |
+| 31   | orientation_points_xld             | 被看做点云的轮廓或多边形的方向                               | 615  |
+| 32   | orientation_xld                    | 轮廓或多边形的方向                                           | 615  |
+| 33   | query_contour_arrribs_xld          | 返回一个XLD轮廓定义的属性的名字                              | 615  |
+| 34   | query_contour_global_attribs_xld   | 返回一个XLD轮廓定义的全局属性的名字                          | 615  |
+| 35   | select_contours_xld                | 根据一些特征选择XLD轮廓                                      | 615  |
+| 36   | select_shape_xld                   | 根据形状特征选择轮廓或多边形                                 | 615  |
+| 37   | select_xld_point                   | 选择包括给定点在内的所有的轮廓或多边形                       | 616  |
+| 38   | smallest_circle_xld                | 轮廓或多边形的最小封闭圆                                     | 616  |
+| 39   | smallest_rectangle1_xld            | 平行与轮廓或多边形的坐标轴的封闭矩形                         | 616  |
+| 40   | smallest_rectangle2_xld            | 轮廓或多边形任意方向的最小封闭矩形                           | 617  |
+| 41   | test_self_intersection_xld         | 测试轮廓或多边形自身相交性                                   | 617  |
+| 42   | test_xld_point                     | 测试一个或多个轮廓或多边形是否寄附在给定点上                 | 618  |
+
+### 26.4	Geometric-Transformations	几何变换
+
+| 序号 | 函数名                       | 函数说明及注释                           | 页码 |
+| ---- | ---------------------------- | ---------------------------------------- | ---- |
+| 1    | affine_trans_contour_xld     | 对XLD轮廓进行一个任意二维仿射变换        | 618  |
+| 2    | affine_trans_polygon_xld     | 对XLD多边形进行一个任意仿射变换          | 618  |
+| 3    | gen_parallel_contour_xld     | 计算一个XLD轮廓的平行轮廓                | 619  |
+| 4    | polar_trans_contour_xld      | 将一个环状弧中的轮廓转换为极坐标形式     | 619  |
+| 5    | polar_trans_contour_xld_inv  | 将极坐标下的轮廓转换为笛卡尔坐标下的形式 | 619  |
+| 6    | projective_trans_contour_xld | 对一个XLD轮廓进行射影变换                | 619  |
+
+### 26.5	Sets	集合
+
+| 序号 | 函数名                              | 函数说明及注释       | 页码 |
+| ---- | ----------------------------------- | -------------------- | ---- |
+| 1    | difference_closed_contours_xld      | 闭合轮廓的差异       | 620  |
+| 2    | difference_closed_polygons_xld      | 闭合多边形的差异     | 620  |
+| 3    | intersection_closed_contours_xld    | 闭合轮廓的交集       | 620  |
+| 4    | intersection_closed_polygons_xld    | 闭合多边形的交集     | 621  |
+| 5    | symm_difference_closed_contours_xld | 闭合轮廓的对称差异   | 621  |
+| 6    | symm_difference_closed_polygons_xld | 闭合多边形的对称差异 | 622  |
+| 7    | union2_closed_contours_xld          | 闭合轮廓的并集       | 622  |
+| 8    | union2_closed_polygons_xld          | 闭合多边形的并集     | 622  |
+
+### 26.6	Transformation	转换
+
+| 序号 | 函数名                            | 函数说明及注释                       | 页码 |
+| ---- | --------------------------------- | ------------------------------------ | ---- |
+| 1    | add_noise_white_contour_xld       | 向XLD轮廓中加入噪声                  | 623  |
+| 2    | clip_contours_xld                 | 修剪矩形内的等高线                   | 623  |
+| 3    | clip_end_points_contours_xld      | 修剪等高线轮廓（按点分割或修剪长度） | 623  |
+| 4    | close_contours_xld                | 封闭一个XLD轮廓                      | 624  |
+| 5    | combine_roads_xld                 | 合并两个等级分辨率中的路（ road）    | 624  |
+| 6    | crop_contours_xld                 | 切割一个XLD轮廓                      | 624  |
+| 7    | merge_cont_line_scan_xld          | 合并连续线扫描图像中的XLD轮廓        | 624  |
+| 8    | regress_contours_xld              | 计算一个XLD轮廓回归线的参数          | 625  |
+| 9    | segment_contours_xld              | 将XLD轮廓分割为分割线和圆周或椭圆弧  | 625  |
+| 10   | shape_trans_xld                   | 改变轮廓或多边形的形状               | 626  |
+| 11   | smooth_contours_xld               | XLD轮廓的平滑                        | 626  |
+| 12   | sort_contours_xld                 | 输入要排序的等高线                   | 626  |
+| 13   | split_contours_xld                | 在主要点分割XLD轮廓                  | 626  |
+| 14   | union_adjacent_contours_xld       | 合并终点连接在一起的轮廓             | 627  |
+| 15   | union_cocircular_contours_xld     | 合并输入同一个圆周的轮廓             | 627  |
+| 16   | union_collinear_contours_ext_xld  | 合并位于同一条圆上的圆弧轮廓         | 628  |
+| 17   | union_collinear_contours_xld      | 合并位于同一条直线上的轮廓           | 628  |
+| 18   | union_cotangential_contours_xld   | 合并具有切线关系的轮廓               | 629  |
+| 19   | union_straight_contours_histo_xld | 合并到给定现有相似距离的相邻直线轮廓 | 630  |
+| 20   | union_straight_contours_xld       | 合并具有相似方向的相邻直线轮廓       | 630  |
+| 21   | track_wire                        | 电线路径查找                         | 631  |
