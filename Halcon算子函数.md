@@ -2033,7 +2033,7 @@
 | 2    | affine_trans_point_2d        | 对点进行任意的最简二维变换                       | 555  |
 | 3    | hom_mat2d_compose            | 将两种相同类型二维变换矩阵相乘                   | 556  |
 | 4    | hom_mat2d_determinant        | 计算一个同质的二维变换矩阵的行列式               | 556  |
-| 5    | hom_mat2d_identify           | 构建二维变换同样的同质变换矩阵                   | 556  |
+| 5    | hom_mat2d_identity           | 构建二维变换同样的同质变换矩阵                   | 556  |
 | 6    | hom_mat2d_invert             | 插入一个同质二维变换矩阵                         | 556  |
 | 7    | hom_mat2d_rotate             | 为一个同质二维变换矩阵添加一个旋转               | 556  |
 | 8    | hom_mat2d_rotate_local       | 为一个同质二维变换矩阵添加一个旋转（以指定位置） | 556  |
